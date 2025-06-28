@@ -1,0 +1,779 @@
+/* ===== CSS Variables ===== */
+:root {
+    --primary-gold: #B89D4F;
+    --secondary-gold: #8B7500;
+    --dark-charcoal: #1E1E1E;
+    --light-gray: #F7F7F7;
+    --white: #FFFFFF;
+    --black: #000000;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --transition: all 0.3s ease;
+    --transition-fast: all 0.2s ease;
+}
+
+/* ===== Global Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Cairo', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .navbar-nav {
+    padding-right: 0;
+}
+
+[dir="rtl"] .me-2 {
+    margin-right: 0 !important;
+    margin-left: 0.5rem !important;
+}
+
+[dir="rtl"] .ms-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+[dir="rtl"] .text-md-end {
+    text-align: left !important;
+}
+
+/* ===== Typography ===== */
+.section-title {
+    font-weight: 700;
+    color: var(--dark-charcoal);
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary-gold);
+}
+
+[dir="rtl"] .section-title::after {
+    left: auto;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+/* ===== Navbar Styles ===== */
+#mainNavbar {
+    transition: var(--transition);
+    padding: 1rem 0;
+    background: transparent;
+}
+
+#mainNavbar.scrolled {
+    background: rgba(30, 30, 30, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--white) !important;
+    text-decoration: none;
+}
+
+.logo-container {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.brand-text .en-text,
+.brand-text .ar-text {
+    display: block;
+    line-height: 1.2;
+}
+
+.brand-text .ar-text {
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.9rem;
+}
+
+.navbar-nav .nav-link {
+    color: var(--white) !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: var(--transition);
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary-gold) !important;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-gold);
+    transition: var(--transition);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+.navbar-controls .btn {
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.navbar-controls .btn:hover {
+    background: var(--primary-gold);
+    border-color: var(--primary-gold);
+    color: var(--white);
+}
+
+/* ===== Hero Section ===== */
+.hero-section {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-item {
+    height: 100vh;
+    position: relative;
+}
+
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.7) 0%, rgba(30, 30, 30, 0.4) 100%);
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    max-width: 800px;
+    width: 90%;
+}
+
+.carousel-caption h1 {
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption p {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption .btn {
+    background: var(--primary-gold);
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.carousel-caption .btn:hover {
+    background: var(--secondary-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(184, 157, 79, 0.3);
+}
+
+.carousel-indicators {
+    bottom: 30px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    margin: 0 5px;
+    transition: var(--transition);
+}
+
+.carousel-indicators button.active {
+    background: var(--primary-gold);
+    transform: scale(1.2);
+
+;
+}
+
+/* ===== About Section ===== */
+#about {
+    background: var(--white);
+    padding: 5rem 0;
+}
+
+.stat-item {
+    padding: 1rem;
+}
+
+.stat-item h3 {
+    color: var(--primary-gold);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    color: var(--text-light);
+    font-weight: 500;
+    margin: 0;
+}
+
+/* ===== Enhanced Leadership Section ===== */
+#leadership {
+    background: var(--light-gray);
+    padding: 5rem 0;
+    position: relative;
+}
+
+#leadership::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(184, 157, 79, 0.05) 0%, rgba(139, 117, 0, 0.05) 100%);
+    pointer-events: none;
+}
+
+.leadership-timeline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.leadership-item {
+    flex: 0 1 300px;
+    max-width: 300px;
+    transition: var(--transition);
+}
+
+.leadership-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    height: 100%;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.leadership-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary-gold);
+}
+
+/* Enhanced CEO Card */
+.ceo-card {
+    transform: scale(1.15);
+    border: 3px solid var(--primary-gold);
+    position: relative;
+    background: linear-gradient(135deg, var(--white) 0%, rgba(184, 157, 79, 0.05) 100%);
+    box-shadow: 0 20px 40px rgba(184, 157, 79, 0.2);
+    z-index: 2;
+}
+
+.ceo-card::before {
+    content: 'CEO';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    z-index: 3;
+    box-shadow: 0 5px 15px rgba(184, 157, 79, 0.3);
+    transition: var(--transition);
+}
+
+.ceo-card.ceo-hovered::before {
+    transform: translateX(-50%) scale(1.1);
+    box-shadow: 0 8px 20px rgba(184, 157, 79, 0.4);
+}
+
+.ceo-card.ceo-hovered {
+    transform: scale(1.2);
+    box-shadow: 0 30px 60px rgba(184, 157, 79, 0.3);
+}
+
+.card-image {
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(184, 157, 79, 0.1) 0%, transparent 100%);
+    z-index: 1;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.leadership-card:hover .card-image::before {
+    opacity: 1;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.leadership-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.card-content h4,
+.card-content h5 {
+    color: var(--dark-charcoal);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.leadership-card:hover .card-content h4,
+.leadership-card:hover .card-content h5 {
+    color: var(--primary-gold);
+}
+
+.position {
+    color: var(--primary-gold);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.leadership-card:hover .position {
+    color: var(--secondary-gold);
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    opacity: 0.7;
+    transition: var(--transition);
+}
+
+.leadership-card:hover .social-links {
+    opacity: 1;
+}
+
+.social-links .btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    background: transparent;
+    border: 2px solid var(--primary-gold);
+    color: var(--primary-gold);
+}
+
+.social-links .btn:hover {
+    background: var(--primary-gold);
+    border-color: var(--primary-gold);
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+/* Card hover effects */
+.card-hovered {
+    transform: translateY(-10px) !important;
+}
+
+.card-hovered .card-content {
+    background: linear-gradient(135deg, rgba(184, 157, 79, 0.05) 0%, transparent 100%);
+}
+
+/* ===== Sustainability Section ===== */
+#sustainability {
+    background: var(--white);
+    padding: 5rem 0;
+}
+
+.sustainability-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    border: 1px solid rgba(184, 157, 79, 0.1);
+}
+
+.sustainability-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-gold);
+}
+
+.icon-container {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: var(--white);
+    font-size: 2rem;
+    transition: var(--transition);
+}
+
+.sustainability-card:hover .icon-container {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.sustainability-card h4 {
+    color: var(--dark-charcoal);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.sustainability-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* ===== Footer ===== */
+.footer {
+    background: var(--dark-charcoal);
+    color: var(--white);
+    padding: 3rem 0 1rem;
+}
+
+.footer-brand h5 {
+    color: var(--primary-gold);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.footer h6 {
+    color: var(--primary-gold);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer ul li a {
+    transition: var(--transition);
+}
+
+.footer ul li a:hover {
+    color: var(--primary-gold) !important;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+
+.contact-info i {
+    color: var(--primary-gold);
+    width: 20px;
+}
+
+.social-links .btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.social-links .btn:hover {
+    background: var(--primary-gold);
+    border-color: var(--primary-gold);
+    color: var(--white);
+}
+
+/* ===== Language Toggle ===== */
+.en-text {
+    display: block;
+}
+
+.ar-text {
+    display: none;
+}
+
+[dir="rtl"] .en-text {
+    display: none;
+}
+
+[dir="rtl"] .ar-text {
+    display: block;
+}
+
+/* ===== Dark Mode ===== */
+body.dark-mode {
+    background: var(--dark-charcoal);
+    color: var(--white);
+}
+
+body.dark-mode .section-title {
+    color: var(--white);
+}
+
+body.dark-mode #leadership {
+    background: #2a2a2a;
+}
+
+body.dark-mode .leadership-card,
+body.dark-mode .sustainability-card {
+    background: #333;
+    color: var(--white);
+}
+
+body.dark-mode .card-content h4,
+body.dark-mode .card-content h5,
+body.dark-mode .sustainability-card h4 {
+    color: var(--white);
+}
+
+body.dark-mode .sustainability-card p {
+    color: #ccc;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 70vh;
+    }
+    
+    .carousel-item {
+        height: 70vh;
+    }
+    
+    .carousel-caption h1 {
+        font-size: 2rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+    
+    .leadership-timeline {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ceo-card {
+        transform: none;
+        margin-bottom: 2rem;
+        order: -1;
+    }
+    
+    .ceo-card.ceo-hovered {
+        transform: scale(1.05);
+    }
+    
+    .leadership-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    
+    .navbar-brand .brand-text {
+        font-size: 0.9rem;
+    }
+    
+    .logo-container {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-caption {
+        width: 95%;
+    }
+    
+    .carousel-caption h1 {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .stat-item h3 {
+        font-size: 2rem;
+    }
+    
+    .sustainability-card {
+        padding: 1.5rem;
+    }
+    
+    .icon-container {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .card-content {
+        padding: 1.5rem;
+    }
+    
+    .card-image {
+        height: 220px;
+    }
+}
+
+/* ===== Animation Classes ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Smooth Scrolling ===== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== Loading Animation ===== */
+.loading {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.loading.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Enhanced Hover Effects ===== */
+.leadership-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(184, 157, 79, 0.1) 0%, transparent 100%);
+    opacity: 0;
+    transition: var(--transition);
+    pointer-events: none;
+}
+
+.leadership-card:hover::after {
+    opacity: 1;
+}
+
+/* ===== Back to Top Button Enhancement ===== */
+.back-to-top {
+    background: var(--primary-gold) !important;
+    border-color: var(--primary-gold) !important;
+    transition: var(--transition) !important;
+}
+
+.back-to-top:hover {
+    background: var(--secondary-gold) !important;
+    border-color: var(--secondary-gold) !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 20px rgba(184, 157, 79, 0.3) !important;
+} 
+
+.carousel-indicators [data-bs-target]{
+    height: 1px !important;
+}
+
+
