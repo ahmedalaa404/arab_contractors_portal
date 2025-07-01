@@ -106,15 +106,43 @@ body {
     font-size: 1.5rem;
 }
 
+.brand-text {
+    margin-left: 16px;
+    font-family: 'Inter', Arial, sans-serif;
+    background: none !important;
+}
+
+[dir="rtl"] .brand-text {
+    margin-left: 0;
+    margin-right: 16px;
+}
+
 .brand-text .en-text,
-.brand-text .ar-text {
+.brand-text .ar-text,
+.arabic-brand-animate {
+    color: #fff !important;
+    background: none !important;
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 1.12em;
+    letter-spacing: 0.05em;
+    text-shadow: none !important;
+}
+
+.brand-text .en-text {
     display: block;
-    line-height: 1.2;
 }
 
 .brand-text .ar-text {
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.9rem;
+    display: none;
+}
+
+[dir="rtl"] .brand-text .en-text {
+    display: none;
+}
+
+[dir="rtl"] .brand-text .ar-text {
+    display: block;
 }
 
 .navbar-nav .nav-link {
@@ -1682,6 +1710,72 @@ body.dark-mode .category-title {
 .contact-form.success .btn-primary {
     background: linear-gradient(135deg, #28a745, #20c997);
     transform: scale(1.05);
+}
+
+.animated-letter {
+    opacity: 0;
+    display: inline-block;
+    background: none !important;
+    box-shadow: none !important;
+    filter: blur(2px);
+    color: var(--primary-gold);
+    font-weight: bold;
+    font-size: 1.3em;
+    letter-spacing: 0.05em;
+    transition: opacity 0.4s, transform 0.4s, filter 0.4s;
+}
+.animated-letter.visible {
+    opacity: 1;
+    filter: blur(0);
+    text-shadow: 0 2px 8px rgba(184,157,79,0.15), 0 1px 0 #fff;
+}
+/* English: fade up */
+.animated-letter.en {
+    transform: scale(0.7) translateY(20px);
+}
+.animated-letter.en.visible {
+    transform: scale(1.1) translateY(0);
+}
+/* Arabic: slide in from right */
+.animated-letter.ar {
+    transform: scale(0.7) translateX(40px);
+}
+.animated-letter.ar.visible {
+    transform: scale(1.1) translateX(0);
+}
+/* Logo rotation animation */
+.logo-rotate {
+    animation: logo-spin 0.7s cubic-bezier(0.68,-0.55,0.27,1.55);
+}
+@keyframes logo-spin {
+    0% { transform: rotate(0deg); }
+    60% { transform: rotate(360deg) scale(1.2); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+.animated-letter.en,
+.animated-letter.en.visible {
+    color: #fff !important;
+}
+
+.arabic-brand-animate {
+    opacity: 0;
+    display: inline-block;
+    color: var(--primary-gold);
+    font-weight: bold;
+    font-size: 1.12em;
+    letter-spacing: 0.07em;
+    transform: scale(0.8) translateY(22px);
+    filter: blur(2px);
+    transition: opacity 0.7s cubic-bezier(0.68,-0.55,0.27,1.55),
+                transform 0.7s cubic-bezier(0.68,-0.55,0.27,1.55),
+                filter 0.7s;
+    text-shadow: 0 4px 16px rgba(184,157,79,0.18), 0 2px 0 #fff;
+}
+.arabic-brand-animate.visible {
+    opacity: 1;
+    transform: scale(1.15) translateY(0);
+    filter: blur(0);
 }
 
 

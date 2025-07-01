@@ -2079,4 +2079,51 @@ $(document).ready(function() {
             $('.contact-message .ar-text').hide();
         }
     }
+
+    // === Animated Brand Name (EN/AR) ===
+    function animateBrandName() {
+        var isArabic = $("html").attr("dir") === "rtl";
+        var name = isArabic ? "المقاولون العرب" : "Arab Contractors";
+        var container = isArabic ? $("#animated-arabic-name") : $(".brand-text .en-text");
+        var logo = $(".logo-container img");
+        container.empty();
+        if (isArabic) {
+            // Arabic: animate whole text with a beautiful effect
+            var span = $("<span>")
+                .addClass("arabic-brand-animate")
+                .text(name);
+            container.append(span);
+            // Animate: fade in, scale up, gold color
+            setTimeout(function() {
+                span.addClass("visible");
+                logo.addClass("logo-rotate");
+                setTimeout(function() { logo.removeClass("logo-rotate"); }, 700);
+            }, 100);
+        } else {
+            // English: animate letter by letter
+            var chars = name.split("");
+            chars.forEach(function(char, i) {
+                var span = $("<span>")
+                    .addClass("animated-letter en")
+                    .text(char);
+                container.append(span);
+            });
+            var letters = container.find(".animated-letter");
+            letters.each(function(index) {
+                setTimeout(() => {
+                    $(this).addClass("visible");
+                    logo.addClass("logo-rotate");
+                    setTimeout(() => logo.removeClass("logo-rotate"), 700);
+                }, 120 * index);
+            });
+        }
+    }
+    // Run on load
+    animateBrandName();
+    // Re-run when language toggled
+    $("#langToggle").on("click", function() {
+        setTimeout(function() {
+            animateBrandName();
+        }, 350);
+    });
 }); 
