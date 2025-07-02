@@ -1778,4 +1778,58 @@ body.dark-mode .category-title {
     filter: blur(0);
 }
 
+/* ===== Animated Loading Spinner Border on Hover ===== */
+.logo-animated-container {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+.logo-animated-container .img-fluid {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 50%;
+    z-index: 2;
+    position: relative;
+}
+.logo-animated-container::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 214, 0, 0.5);
+    border-top: 4px solid rgba(255, 214, 0, 1);
+    border-right: 4px solid rgba(255, 214, 0, 0.7);
+    border-bottom: 4px solid rgba(255, 214, 0, 0.2);
+    border-left: 4px solid rgba(255, 214, 0, 0.1);
+    box-sizing: border-box;
+    z-index: 1;
+    opacity: 0;
+    transform: scale(1.3) rotate(0deg);
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+.logo-animated-container:hover::before,
+.logo-animated-container:focus-within::before {
+    opacity: 1;
+    animation: logo-spinner-rotate 1s linear infinite;
+}
+
+@keyframes logo-spinner-rotate {
+    100% { transform: scale(1.3) rotate(360deg); }
+}
+
+@media (max-width: 576px) {
+    .logo-animated-container {
+        width: 36px;
+        height: 36px;
+    }
+}
+
 
