@@ -58,7 +58,6 @@ $(document).ready(function() {
         en: {
             'nav.home': 'Home',
             'nav.about': 'About',
-            'nav.projects': 'Projects',
             'nav.leadership': 'Leadership',
             'nav.sustainability': 'Sustainability',
             'nav.contact': 'Contact',
@@ -69,7 +68,6 @@ $(document).ready(function() {
         ar: {
             'nav.home': 'الرئيسية',
             'nav.about': 'عن الشركة',
-            'nav.projects': 'المشاريع',
             'nav.leadership': 'القيادة',
             'nav.sustainability': 'الاستدامة',
             'nav.contact': 'اتصل بنا',
@@ -119,6 +117,9 @@ $(document).ready(function() {
             $('.ar-text').hide();
         }
         
+        // Update dropdown menu language
+        updateDropdownLanguage(isRTL);
+        
         // Store preference
         localStorage.setItem('preferred-language', lang);
         
@@ -126,6 +127,17 @@ $(document).ready(function() {
         setTimeout(function() {
             animateBrandName();
         }, 100);
+    }
+    
+    // Function to update dropdown menu language
+    function updateDropdownLanguage(isRTL) {
+        if (isRTL) {
+            $('.dropdown-menu .en-text').hide();
+            $('.dropdown-menu .ar-text').show();
+        } else {
+            $('.dropdown-menu .en-text').show();
+            $('.dropdown-menu .ar-text').hide();
+        }
     }
 
     // ===== Dark Mode Toggle =====

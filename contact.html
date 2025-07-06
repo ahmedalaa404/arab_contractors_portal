@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Arab Contractors | المقاولون العرب</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header/Navbar -->
+    <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <!-- Logo and Brand -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="logo-container me-3 bg-white">
+                    <div class="logo-animated-container">
+                        <img src="logo.png" alt="logo" class="img-fluid">
+                    </div>
+                </div>
+                <div class="brand-text">
+                    <div class="en-text">Arab Contractors</div>
+                    <div class="ar-text"><span id="animated-arabic-name"></span></div>
+                </div>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" data-i18n="nav.home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about" data-i18n="nav.about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="leadership.html" data-i18n="nav.leadership">Leadership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#sustainability" data-i18n="nav.sustainability">Sustainability</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.contact">
+                            <span class="en-text">Contact</span>
+                            <span class="ar-text">اتصل بنا</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item active" href="contact.html">
+                                    <span class="en-text">Contact Us</span>
+                                    <span class="ar-text">اتصل بنا</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="index.html#offices">
+                                    <span class="en-text">Offices</span>
+                                    <span class="ar-text">المكاتب</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Language and Theme Toggles -->
+                <div class="navbar-controls d-flex align-items-center ms-3 text-white" >
+                    <button id="langToggle" class="btn btn-outline-light btn-sm me-2" title="Toggle Language">
+                        <span class="en-text">AR</span>
+                        <span class="ar-text">EN</span>
+                    </button>
+                    <button id="themeToggle" class="btn btn-outline-light btn-sm" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-5 bg-light" style="margin-top: 100px;">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">
+                <span class="en-text">Contact Us</span>
+                <span class="ar-text">اتصل بنا</span>
+            </h2>
+
+            <div class="row g-5">
+                <!-- Contact Information -->
+                <div class="col-lg-4" data-aos="fade-right">
+                    <div class="contact-info-card">
+                        <h4 class="mb-4">
+                            <i class="fas fa-info-circle me-2 text-primary"></i>
+                            <span class="en-text">Get In Touch</span>
+                            <span class="ar-text">تواصل معنا</span>
+                        </h4>
+
+                        <div class="contact-item mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h6 class="mb-1">
+                                    <span class="en-text">Head Office</span>
+                                    <span class="ar-text">المقر الرئيسي</span>
+                                </h6>
+                                <p class="mb-0">
+                                    <span class="en-text">123 Construction Street, Cairo, Egypt</span>
+                                    <span class="ar-text">123 شارع البناء، القاهرة، مصر</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h6 class="mb-1">
+                                    <span class="en-text">Phone</span>
+                                    <span class="ar-text">الهاتف</span>
+                                </h6>
+                                <p class="mb-0">+20 2 1234 5678</p>
+                                <p class="mb-0">+20 2 1234 5679</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h6 class="mb-1">
+                                    <span class="en-text">Email</span>
+                                    <span class="ar-text">البريد الإلكتروني</span>
+                                </h6>
+                                <p class="mb-0">info@arabcontractors.com</p>
+                                <p class="mb-0">projects@arabcontractors.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h6 class="mb-1">
+                                    <span class="en-text">Working Hours</span>
+                                    <span class="ar-text">ساعات العمل</span>
+                                </h6>
+                                <p class="mb-0">
+                                    <span class="en-text">Sunday - Thursday: 8:00 AM - 6:00 PM</span>
+                                    <span class="ar-text">الأحد - الخميس: 8:00 ص - 6:00 م</span>
+                                </p>
+                                <p class="mb-0">
+                                    <span class="en-text">Friday - Saturday: Closed</span>
+                                    <span class="ar-text">الجمعة - السبت: مغلق</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="social-links mt-4">
+                            <h6 class="mb-3">
+                                <span class="en-text">Follow Us</span>
+                                <span class="ar-text">تابعنا</span>
+                            </h6>
+                            <a href="#" class="btn btn-outline-primary btn-sm me-2">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-sm me-2">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-sm me-2">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-sm">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-8" data-aos="fade-left">
+                    <div class="contact-form-card">
+                        <h4 class="mb-4">
+                            <i class="fas fa-paper-plane me-2 text-primary"></i>
+                            <span class="en-text">Send Us a Message</span>
+                            <span class="ar-text">أرسل لنا رسالة</span>
+                        </h4>
+
+                        <form id="contactForm" class="contact-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="firstName" class="form-label">
+                                            <span class="en-text">First Name *</span>
+                                            <span class="ar-text">الاسم الأول *</span>
+                                        </label>
+                                        <input type="text" class="form-control" id="firstName" name="firstName"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="lastName" class="form-label">
+                                            <span class="en-text">Last Name *</span>
+                                            <span class="ar-text">اسم العائلة *</span>
+                                        </label>
+                                        <input type="text" class="form-control" id="lastName" name="lastName" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">
+                                            <span class="en-text">Email Address *</span>
+                                            <span class="ar-text">عنوان البريد الإلكتروني *</span>
+                                        </label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone" class="form-label">
+                                            <span class="en-text">Phone Number</span>
+                                            <span class="ar-text">رقم الهاتف</span>
+                                        </label>
+                                        <input type="tel" class="form-control" id="phone" name="phone">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="company" class="form-label">
+                                            <span class="en-text">Company/Organization</span>
+                                            <span class="ar-text">الشركة/المنظمة</span>
+                                        </label>
+                                        <input type="text" class="form-control" id="company" name="company">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="subject" class="form-label">
+                                            <span class="en-text">Subject *</span>
+                                            <span class="ar-text">الموضوع *</span>
+                                        </label>
+                                        <select class="form-select" id="subject" name="subject" required>
+                                            <option value="">
+                                                <span class="en-text">Select a subject</span>
+                                                <span class="ar-text">اختر موضوع</span>
+                                            </option>
+                                            <option value="general">
+                                                <span class="en-text">General Inquiry</span>
+                                                <span class="ar-text">استفسار عام</span>
+                                            </option>
+                                            <option value="project">
+                                                <span class="en-text">Project Inquiry</span>
+                                                <span class="ar-text">استفسار عن مشروع</span>
+                                            </option>
+                                            <option value="partnership">
+                                                <span class="en-text">Partnership</span>
+                                                <span class="ar-text">شراكة</span>
+                                            </option>
+                                            <option value="career">
+                                                <span class="en-text">Career Opportunities</span>
+                                                <span class="ar-text">فرص العمل</span>
+                                            </option>
+                                            <option value="support">
+                                                <span class="en-text">Technical Support</span>
+                                                <span class="ar-text">الدعم التقني</span>
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="message" class="form-label">
+                                            <span class="en-text">Message *</span>
+                                            <span class="ar-text">الرسالة *</span>
+                                        </label>
+                                        <textarea class="form-control" id="message" name="message" rows="5"
+                                            required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="privacy" name="privacy"
+                                            required>
+                                        <label class="form-check-label" for="privacy">
+                                            <span class="en-text">I agree to the privacy policy and terms of
+                                                service</span>
+                                            <span class="ar-text">أوافق على سياسة الخصوصية وشروط الخدمة</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-paper-plane me-2"></i>
+                                        <span class="en-text">Send Message</span>
+                                        <span class="ar-text">إرسال الرسالة</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Office Locations -->
+            <div class="row mt-5 pt-5">
+                <div class="col-12">
+                    <h3 class="text-center mb-5" data-aos="fade-up">
+                        <span class="en-text">Our Office Locations</span>
+                        <span class="ar-text">مواقع مكاتبنا</span>
+                    </h3>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="office-card">
+                        <div class="office-header">
+                            <i class="fas fa-building"></i>
+                            <h5>
+                                <span class="en-text">Cairo Office</span>
+                                <span class="ar-text">مكتب القاهرة</span>
+                            </h5>
+                        </div>
+                        <div class="office-content">
+                            <p>
+                                <span class="en-text">123 Construction Street, Cairo, Egypt</span>
+                                <span class="ar-text">123 شارع البناء، القاهرة، مصر</span>
+                            </p>
+                            <p><strong>Tel:</strong> +20 2 1234 5678</p>
+                            <p><strong>Email:</strong> cairo@arabcontractors.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="office-card">
+                        <div class="office-header">
+                            <i class="fas fa-building"></i>
+                            <h5>
+                                <span class="en-text">Alexandria Office</span>
+                                <span class="ar-text">مكتب الإسكندرية</span>
+                            </h5>
+                        </div>
+                        <div class="office-content">
+                            <p>
+                                <span class="en-text">456 Engineering Avenue, Alexandria, Egypt</span>
+                                <span class="ar-text">456 شارع الهندسة، الإسكندرية، مصر</span>
+                            </p>
+                            <p><strong>Tel:</strong> +20 3 1234 5678</p>
+                            <p><strong>Email:</strong> alexandria@arabcontractors.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="office-card">
+                        <div class="office-header">
+                            <i class="fas fa-building"></i>
+                            <h5>
+                                <span class="en-text">Dubai Office</span>
+                                <span class="ar-text">مكتب دبي</span>
+                            </h5>
+                        </div>
+                        <div class="office-content">
+                            <p>
+                                <span class="en-text">789 Business Bay, Dubai, UAE</span>
+                                <span class="ar-text">789 خليج الأعمال، دبي، الإمارات</span>
+                            </p>
+                            <p><strong>Tel:</strong> +971 4 1234 5678</p>
+                            <p><strong>Email:</strong> dubai@arabcontractors.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand mb-4">
+                        <div class="logo-container mb-3">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h5>
+                            <span class="en-text">Arab Contractors</span>
+                            <span class="ar-text">المقاولون العرب</span>
+                        </h5>
+                        <p class="text-white">
+                            <span class="en-text">Building excellence since 1955</span>
+                            <span class="ar-text">نبني التميز منذ 1955</span>
+                        </p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="mb-3">
+                        <span class="en-text">Quick Links</span>
+                        <span class="ar-text">روابط سريعة</span>
+                    </h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">
+                                <span class="en-text">Home</span>
+                                <span class="ar-text">الرئيسية</span>
+                            </a></li>
+                        <li><a href="index.html#about" class="text-white text-decoration-none">
+                                <span class="en-text">About</span>
+                                <span class="ar-text">عن الشركة</span>
+                            </a></li>
+                        <li><a href="index.html#sustainability" class="text-white text-decoration-none">
+                                <span class="en-text">Sustainability</span>
+                                <span class="ar-text">الاستدامة</span>
+                            </a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">
+                                <span class="en-text">Contact</span>
+                                <span class="ar-text">اتصل بنا</span>
+                            </a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 text-white">
+                    <h6 class="mb-3">
+                        <span class="en-text">Services</span>
+                        <span class="ar-text">الخدمات</span>
+                    </h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">
+                                <span class="en-text">Infrastructure Development</span>
+                                <span class="ar-text">تطوير البنية التحتية</span>
+                            </a></li>
+                        <li><a href="#" class="text-white text-decoration-none">
+                                <span class="en-text">Commercial Construction</span>
+                                <span class="ar-text">البناء التجاري</span>
+                            </a></li>
+                        <li><a href="#" class="text-white text-decoration-none">
+                                <span class="en-text">Residential Projects</span>
+                                <span class="ar-text">المشاريع السكنية</span>
+                            </a></li>
+                        <li><a href="#" class="text-white text-decoration-none">
+                                <span class="en-text">Engineering Consulting</span>
+                                <span class="ar-text">الاستشارات الهندسية</span>
+                            </a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <h6 class="mb-3">
+                        <span class="en-text">Contact Info</span>
+                        <span class="ar-text">معلومات الاتصال</span>
+                    </h6>
+                    <div class="contact-info">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>
+                            <span class="en-text">Cairo, Egypt</span>
+                            <span class="ar-text">القاهرة، مصر</span>
+                        </p>
+                        <p class="mb-2"><i class="fas fa-phone me-2"></i>+20 2 1234 5678</p>
+                        <p class="mb-2"><i class="fas fa-envelope me-2"></i>info@arabcontractors.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-white">
+                        <span class="en-text">&copy; 2024 Arab Contractors. All rights reserved.</span>
+                        <span class="ar-text">&copy; 2024 المقاولون العرب. جميع الحقوق محفوظة.</span>
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white text-decoration-none me-3">
+                        <span class="en-text">Privacy Policy</span>
+                        <span class="ar-text">سياسة الخصوصية</span>
+                    </a>
+                    <a href="#" class="text-white text-decoration-none">
+                        <span class="en-text">Terms of Service</span>
+                        <span class="ar-text">شروط الخدمة</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html> 

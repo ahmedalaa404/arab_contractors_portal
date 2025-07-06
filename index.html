@@ -61,8 +61,25 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#sustainability" data-i18n="nav.sustainability">Sustainability</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.contact">
+                            <span class="en-text">Contact</span>
+                            <span class="ar-text">اتصل بنا</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="contact.html">
+                                    <span class="en-text">Contact Us</span>
+                                    <span class="ar-text">اتصل بنا</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#offices">
+                                    <span class="en-text">Offices</span>
+                                    <span class="ar-text">المكاتب</span>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
 
@@ -281,299 +298,421 @@
         </div>
     </section>
 
-    <!-- Contact Us Section -->
-    <section id="contact" class="py-5 bg-light">
+    <!-- Office Locations Section -->
+    <section id="offices" class="py-5">
         <div class="container">
             <h2 class="section-title text-center mb-5" data-aos="fade-up">
-                <span class="en-text">Contact Us</span>
-                <span class="ar-text">اتصل بنا</span>
+                <span class="en-text">Our Office Network</span>
+                <span class="ar-text">شبكة مكاتبنا</span>
             </h2>
 
-            <div class="row g-5">
-                <!-- Contact Information -->
-                <div class="col-lg-4" data-aos="fade-right">
-                    <div class="contact-info-card">
-                        <h4 class="mb-4">
-                            <i class="fas fa-info-circle me-2 text-primary"></i>
-                            <span class="en-text">Get In Touch</span>
-                            <span class="ar-text">تواصل معنا</span>
-                        </h4>
-
-                        <div class="contact-item mb-4">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
+            <!-- Main Office -->
+            <div class="row mb-5" data-aos="fade-up">
+                <div class="col-12">
+                    <div class="main-office-card">
+                        <div class="main-office-header">
+                            <div class="main-office-badge">
+                                <i class="fas fa-crown"></i>
                             </div>
-                            <div class="contact-details">
-                                <h6 class="mb-1">
-                                    <span class="en-text">Head Office</span>
-                                    <span class="ar-text">المقر الرئيسي</span>
-                                </h6>
-                                <p class="mb-0">
-                                    <span class="en-text">123 Construction Street, Cairo, Egypt</span>
-                                    <span class="ar-text">123 شارع البناء، القاهرة، مصر</span>
-                                </p>
+                            <h3 class="main-office-title">
+                                <span class="en-text">Main Headquarters</span>
+                                <span class="ar-text">المقر الرئيسي</span>
+                            </h3>
+                            <p class="main-office-subtitle">
+                                <span class="en-text">Cairo, Egypt</span>
+                                <span class="ar-text">القاهرة، مصر</span>
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="main-office-details">
+                                    <div class="office-info-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <div>
+                                            <h6>
+                                                <span class="en-text">Address</span>
+                                                <span class="ar-text">العنوان</span>
+                                            </h6>
+                                            <p>
+                                                <span class="en-text">123 Construction Street, Nasr City, Cairo, Egypt</span>
+                                                <span class="ar-text">123 شارع البناء، مدينة نصر، القاهرة، مصر</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="office-info-item">
+                                        <i class="fas fa-location-arrow"></i>
+                                        <div>
+                                            <h6>
+                                                <span class="en-text">GPS Coordinates</span>
+                                                <span class="ar-text">إحداثيات GPS</span>
+                                            </h6>
+                                            <p>30.0444° N, 31.2357° E</p>
+                                        </div>
+                                    </div>
+                                    <div class="office-info-item">
+                                        <i class="fas fa-phone"></i>
+                                        <div>
+                                            <h6>
+                                                <span class="en-text">Phone Numbers</span>
+                                                <span class="ar-text">أرقام الهاتف</span>
+                                            </h6>
+                                            <p>+20 2 1234 5678</p>
+                                            <p>+20 2 1234 5679</p>
+                                            <p>+20 2 1234 5680</p>
+                                        </div>
+                                    </div>
+                                    <div class="office-info-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <div>
+                                            <h6>
+                                                <span class="en-text">Email</span>
+                                                <span class="ar-text">البريد الإلكتروني</span>
+                                            </h6>
+                                            <p>info@arabcontractors.com</p>
+                                            <p>projects@arabcontractors.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="main-office-map">
+                                    <div class="map-placeholder">
+                                        <div class="map-header">
+                                            <i class="fas fa-map-marked-alt"></i>
+                                            <span class="en-text">Cairo, Egypt</span>
+                                            <span class="ar-text">القاهرة، مصر</span>
+                                        </div>
+                                        <div class="map-content">
+                                            <div class="google-map-container">
+                                                <iframe 
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.5!2d31.2357!3d30.0444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDAyJzM5LjgiTiAzMcKwMTQnMDguNSJF!5e0!3m2!1sen!2seg!4v1234567890"
+                                                    width="100%" 
+                                                    height="200" 
+                                                    style="border:0;" 
+                                                    allowfullscreen="" 
+                                                    loading="lazy" 
+                                                    referrerpolicy="no-referrer-when-downgrade">
+                                                </iframe>
+                                            </div>
+                                            <div class="map-info-panel">
+                                                <div class="map-coordinates">
+                                                    <i class="fas fa-crosshairs"></i>
+                                                    <span>30.0444° N, 31.2357° E</span>
+                                                </div>
+                                                <div class="map-location-details">
+                                                    <div class="location-marker">
+                                                        <i class="fas fa-building"></i>
+                                                        <span class="en-text">Arab Contractors HQ</span>
+                                                        <span class="ar-text">المقاولون العرب - المقر الرئيسي</span>
+                                                    </div>
+                                                    <div class="map-actions">
+                                                        <a href="https://maps.google.com/?q=30.0444,31.2357" target="_blank" class="map-action-btn">
+                                                            <i class="fas fa-external-link-alt"></i>
+                                                            <span class="en-text">Open in Google Maps</span>
+                                                            <span class="ar-text">افتح في خرائط جوجل</span>
+                                                        </a>
+                                                        <a href="https://maps.google.com/?q=30.0444,31.2357&z=15" target="_blank" class="map-action-btn">
+                                                            <i class="fas fa-directions"></i>
+                                                            <span class="en-text">Get Directions</span>
+                                                            <span class="ar-text">احصل على الاتجاهات</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="map-footer">
+                                            <span class="en-text">Real-time Google Maps View</span>
+                                            <span class="ar-text">عرض خرائط جوجل المباشر</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="contact-item mb-4">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h6 class="mb-1">
-                                    <span class="en-text">Phone</span>
-                                    <span class="ar-text">الهاتف</span>
-                                </h6>
-                                <p class="mb-0">+20 2 1234 5678</p>
-                                <p class="mb-0">+20 2 1234 5679</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-item mb-4">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h6 class="mb-1">
-                                    <span class="en-text">Email</span>
-                                    <span class="ar-text">البريد الإلكتروني</span>
-                                </h6>
-                                <p class="mb-0">info@arabcontractors.com</p>
-                                <p class="mb-0">projects@arabcontractors.com</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-item mb-4">
-                            <div class="contact-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h6 class="mb-1">
-                                    <span class="en-text">Working Hours</span>
-                                    <span class="ar-text">ساعات العمل</span>
-                                </h6>
-                                <p class="mb-0">
-                                    <span class="en-text">Sunday - Thursday: 8:00 AM - 6:00 PM</span>
-                                    <span class="ar-text">الأحد - الخميس: 8:00 ص - 6:00 م</span>
-                                </p>
-                                <p class="mb-0">
-                                    <span class="en-text">Friday - Saturday: Closed</span>
-                                    <span class="ar-text">الجمعة - السبت: مغلق</span>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="social-links mt-4">
-                            <h6 class="mb-3">
-                                <span class="en-text">Follow Us</span>
-                                <span class="ar-text">تابعنا</span>
-                            </h6>
-                            <a href="#" class="btn btn-outline-primary btn-sm me-2">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="btn btn-outline-primary btn-sm me-2">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="btn btn-outline-primary btn-sm me-2">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="#" class="btn btn-outline-primary btn-sm">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact Form -->
-                <div class="col-lg-8" data-aos="fade-left">
-                    <div class="contact-form-card">
-                        <h4 class="mb-4">
-                            <i class="fas fa-paper-plane me-2 text-primary"></i>
-                            <span class="en-text">Send Us a Message</span>
-                            <span class="ar-text">أرسل لنا رسالة</span>
-                        </h4>
-
-                        <form id="contactForm" class="contact-form">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="firstName" class="form-label">
-                                            <span class="en-text">First Name *</span>
-                                            <span class="ar-text">الاسم الأول *</span>
-                                        </label>
-                                        <input type="text" class="form-control" id="firstName" name="firstName"
-                                            required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="lastName" class="form-label">
-                                            <span class="en-text">Last Name *</span>
-                                            <span class="ar-text">اسم العائلة *</span>
-                                        </label>
-                                        <input type="text" class="form-control" id="lastName" name="lastName" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="email" class="form-label">
-                                            <span class="en-text">Email Address *</span>
-                                            <span class="ar-text">عنوان البريد الإلكتروني *</span>
-                                        </label>
-                                        <input type="email" class="form-control" id="email" name="email" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="phone" class="form-label">
-                                            <span class="en-text">Phone Number</span>
-                                            <span class="ar-text">رقم الهاتف</span>
-                                        </label>
-                                        <input type="tel" class="form-control" id="phone" name="phone">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="company" class="form-label">
-                                            <span class="en-text">Company/Organization</span>
-                                            <span class="ar-text">الشركة/المنظمة</span>
-                                        </label>
-                                        <input type="text" class="form-control" id="company" name="company">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="subject" class="form-label">
-                                            <span class="en-text">Subject *</span>
-                                            <span class="ar-text">الموضوع *</span>
-                                        </label>
-                                        <select class="form-select" id="subject" name="subject" required>
-                                            <option value="">
-                                                <span class="en-text">Select a subject</span>
-                                                <span class="ar-text">اختر موضوع</span>
-                                            </option>
-                                            <option value="general">
-                                                <span class="en-text">General Inquiry</span>
-                                                <span class="ar-text">استفسار عام</span>
-                                            </option>
-                                            <option value="project">
-                                                <span class="en-text">Project Inquiry</span>
-                                                <span class="ar-text">استفسار عن مشروع</span>
-                                            </option>
-                                            <option value="partnership">
-                                                <span class="en-text">Partnership</span>
-                                                <span class="ar-text">شراكة</span>
-                                            </option>
-                                            <option value="career">
-                                                <span class="en-text">Career Opportunities</span>
-                                                <span class="ar-text">فرص العمل</span>
-                                            </option>
-                                            <option value="support">
-                                                <span class="en-text">Technical Support</span>
-                                                <span class="ar-text">الدعم التقني</span>
-                                            </option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="message" class="form-label">
-                                            <span class="en-text">Message *</span>
-                                            <span class="ar-text">الرسالة *</span>
-                                        </label>
-                                        <textarea class="form-control" id="message" name="message" rows="5"
-                                            required></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="privacy" name="privacy"
-                                            required>
-                                        <label class="form-check-label" for="privacy">
-                                            <span class="en-text">I agree to the privacy policy and terms of
-                                                service</span>
-                                            <span class="ar-text">أوافق على سياسة الخصوصية وشروط الخدمة</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-primary btn-lg">
-                                        <i class="fas fa-paper-plane me-2"></i>
-                                        <span class="en-text">Send Message</span>
-                                        <span class="ar-text">إرسال الرسالة</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>
 
-            <!-- Office Locations -->
-            <div class="row mt-5 pt-5">
+            <!-- Major Offices -->
+            <div class="row mb-5" data-aos="fade-up" data-aos-delay="200">
                 <div class="col-12">
-                    <h3 class="text-center mb-5" data-aos="fade-up">
-                        <span class="en-text">Our Office Locations</span>
-                        <span class="ar-text">مواقع مكاتبنا</span>
+                    <h3 class="section-subtitle text-center mb-4">
+                        <i class="fas fa-building"></i>
+                        <span class="en-text">Major Regional Offices</span>
+                        <span class="ar-text">المكاتب الإقليمية الرئيسية</span>
+                    </h3>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="major-office-card">
+                        <div class="major-office-header">
+                            <div class="major-office-badge">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>
+                                <span class="en-text">Alexandria Office</span>
+                                <span class="ar-text">مكتب الإسكندرية</span>
+                            </h4>
+                            <p>
+                                <span class="en-text">Northern Region</span>
+                                <span class="ar-text">المنطقة الشمالية</span>
+                            </p>
+                        </div>
+                        <div class="major-office-content">
+                            <div class="office-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>
+                                    <span class="en-text">456 Engineering Avenue, Alexandria, Egypt</span>
+                                    <span class="ar-text">456 شارع الهندسة، الإسكندرية، مصر</span>
+                                </span>
+                            </div>
+                            <div class="office-detail">
+                                <i class="fas fa-location-arrow"></i>
+                                <span>31.2001° N, 29.9187° E</span>
+                            </div>
+                            <div class="office-detail">
+                                <i class="fas fa-phone"></i>
+                                <span>+20 3 1234 5678</span>
+                            </div>
+                            <div class="office-detail">
+                                <i class="fas fa-envelope"></i>
+                                <span>alexandria@arabcontractors.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="major-office-card">
+                        <div class="major-office-header">
+                            <div class="major-office-badge">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>
+                                <span class="en-text">Dubai Office</span>
+                                <span class="ar-text">مكتب دبي</span>
+                            </h4>
+                            <p>
+                                <span class="en-text">Gulf Region</span>
+                                <span class="ar-text">منطقة الخليج</span>
+                            </p>
+                        </div>
+                        <div class="major-office-content">
+                            <div class="office-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>
+                                    <span class="en-text">789 Business Bay, Dubai, UAE</span>
+                                    <span class="ar-text">789 خليج الأعمال، دبي، الإمارات</span>
+                                </span>
+                            </div>
+                            <div class="office-detail">
+                                <i class="fas fa-location-arrow"></i>
+                                <span>25.2048° N, 55.2708° E</span>
+                            </div>
+                            <div class="office-detail">
+                                <i class="fas fa-phone"></i>
+                                <span>+971 4 1234 5678</span>
+                            </div>
+                            <div class="office-detail">
+                                <i class="fas fa-envelope"></i>
+                                <span>dubai@arabcontractors.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="major-office-card">
+                        <div class="major-office-header">
+                            <div class="major-office-badge">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>
+                                <span class="en-text">Riyadh Office</span>
+                                <span class="ar-text">مكتب الرياض</span>
+                            </h4>
+                            <p>
+                                <span class="en-text">Saudi Arabia</span>
+                                <span class="ar-text">المملكة العربية السعودية</span>
+                            </p>
+                        </div>
+                        <div class="major-office-content">
+                            <div class="office-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>
+                                    <span class="en-text">321 King Fahd Road, Riyadh, Saudi Arabia</span>
+                                    <span class="ar-text">321 طريق الملك فهد، الرياض، المملكة العربية السعودية</span>
+                                </span>
+                            </div>
+                            <div class="office-detail">
+                                <i class="fas fa-location-arrow"></i>
+                                <span>24.7136° N, 46.6753° E</span>
+                            </div>
+                            <div class="office-detail">
+                                <i class="fas fa-phone"></i>
+                                <span>+966 11 1234 5678</span>
+                            </div>
+                            <div class="office-detail">
+                                <i class="fas fa-envelope"></i>
+                                <span>riyadh@arabcontractors.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="major-office-card">
+                        <div class="major-office-header">
+                            <div class="major-office-badge">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>
+                                <span class="en-text">Kuwait Office</span>
+                                <span class="ar-text">مكتب الكويت</span>
+                            </h4>
+                            <p>
+                                <span class="en-text">Kuwait</span>
+                                <span class="ar-text">الكويت</span>
+                            </p>
+                        </div>
+                        <div class="major-office-content">
+                            <div class="office-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>
+                                    <span class="en-text">654 Gulf Street, Kuwait City, Kuwait</span>
+                                    <span class="ar-text">654 شارع الخليج، مدينة الكويت، الكويت</span>
+                                </span>
+                            </div>
+                            <div class="office-detail">
+                                <i class="fas fa-location-arrow"></i>
+                                <span>29.3759° N, 47.9774° E</span>
+                            </div>
+                            <div class="office-detail">
+                                <i class="fas fa-phone"></i>
+                                <span>+965 1 1234 5678</span>
+                            </div>
+                            <div class="office-detail">
+                                <i class="fas fa-envelope"></i>
+                                <span>kuwait@arabcontractors.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regional Centers -->
+            <div class="row" data-aos="fade-up" data-aos-delay="700">
+                <div class="col-12">
+                    <h3 class="section-subtitle text-center mb-4">
+                        <i class="fas fa-map-pin"></i>
+                        <span class="en-text">Regional Centers</span>
+                        <span class="ar-text">المراكز الإقليمية</span>
                     </h3>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="office-card">
-                        <div class="office-header">
-                            <i class="fas fa-building"></i>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="800">
+                    <div class="center-card">
+                        <div class="center-header">
+                            <i class="fas fa-map-pin"></i>
                             <h5>
-                                <span class="en-text">Cairo Office</span>
-                                <span class="ar-text">مكتب القاهرة</span>
+                                <span class="en-text">Aswan Center</span>
+                                <span class="ar-text">مركز أسوان</span>
                             </h5>
                         </div>
-                        <div class="office-content">
-                            <p>
-                                <span class="en-text">123 Construction Street, Cairo, Egypt</span>
-                                <span class="ar-text">123 شارع البناء، القاهرة، مصر</span>
-                            </p>
-                            <p><strong>Tel:</strong> +20 2 1234 5678</p>
-                            <p><strong>Email:</strong> cairo@arabcontractors.com</p>
+                        <div class="center-content">
+                            <p><i class="fas fa-map-marker-alt"></i> <span class="en-text">Aswan, Egypt</span><span class="ar-text">أسوان، مصر</span></p>
+                            <p><i class="fas fa-location-arrow"></i> 24.0889° N, 32.8998° E</p>
+                            <p><i class="fas fa-phone"></i> +20 97 1234 5678</p>
+                            <p><i class="fas fa-envelope"></i> aswan@arabcontractors.com</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="office-card">
-                        <div class="office-header">
-                            <i class="fas fa-building"></i>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="900">
+                    <div class="center-card">
+                        <div class="center-header">
+                            <i class="fas fa-map-pin"></i>
                             <h5>
-                                <span class="en-text">Alexandria Office</span>
-                                <span class="ar-text">مكتب الإسكندرية</span>
+                                <span class="en-text">Luxor Center</span>
+                                <span class="ar-text">مركز الأقصر</span>
                             </h5>
                         </div>
-                        <div class="office-content">
-                            <p>
-                                <span class="en-text">456 Engineering Avenue, Alexandria, Egypt</span>
-                                <span class="ar-text">456 شارع الهندسة، الإسكندرية، مصر</span>
-                            </p>
-                            <p><strong>Tel:</strong> +20 3 1234 5678</p>
-                            <p><strong>Email:</strong> alexandria@arabcontractors.com</p>
+                        <div class="center-content">
+                            <p><i class="fas fa-map-marker-alt"></i> <span class="en-text">Luxor, Egypt</span><span class="ar-text">الأقصر، مصر</span></p>
+                            <p><i class="fas fa-location-arrow"></i> 25.6872° N, 32.6396° E</p>
+                            <p><i class="fas fa-phone"></i> +20 95 1234 5678</p>
+                            <p><i class="fas fa-envelope"></i> luxor@arabcontractors.com</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
-                    <div class="office-card">
-                        <div class="office-header">
-                            <i class="fas fa-building"></i>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="center-card">
+                        <div class="center-header">
+                            <i class="fas fa-map-pin"></i>
                             <h5>
-                                <span class="en-text">Dubai Office</span>
-                                <span class="ar-text">مكتب دبي</span>
+                                <span class="en-text">Sharm El Sheikh Center</span>
+                                <span class="ar-text">مركز شرم الشيخ</span>
                             </h5>
                         </div>
-                        <div class="office-content">
-                            <p>
-                                <span class="en-text">789 Business Bay, Dubai, UAE</span>
-                                <span class="ar-text">789 خليج الأعمال، دبي، الإمارات</span>
-                            </p>
-                            <p><strong>Tel:</strong> +971 4 1234 5678</p>
-                            <p><strong>Email:</strong> dubai@arabcontractors.com</p>
+                        <div class="center-content">
+                            <p><i class="fas fa-map-marker-alt"></i> <span class="en-text">Sharm El Sheikh, Egypt</span><span class="ar-text">شرم الشيخ، مصر</span></p>
+                            <p><i class="fas fa-location-arrow"></i> 27.9158° N, 34.3300° E</p>
+                            <p><i class="fas fa-phone"></i> +20 69 1234 5678</p>
+                            <p><i class="fas fa-envelope"></i> sharm@arabcontractors.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="1100">
+                    <div class="center-card">
+                        <div class="center-header">
+                            <i class="fas fa-map-pin"></i>
+                            <h5>
+                                <span class="en-text">Hurghada Center</span>
+                                <span class="ar-text">مركز الغردقة</span>
+                            </h5>
+                        </div>
+                        <div class="center-content">
+                            <p><i class="fas fa-map-marker-alt"></i> <span class="en-text">Hurghada, Egypt</span><span class="ar-text">الغردقة، مصر</span></p>
+                            <p><i class="fas fa-location-arrow"></i> 27.2579° N, 33.8116° E</p>
+                            <p><i class="fas fa-phone"></i> +20 65 1234 5678</p>
+                            <p><i class="fas fa-envelope"></i> hurghada@arabcontractors.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="1200">
+                    <div class="center-card">
+                        <div class="center-header">
+                            <i class="fas fa-map-pin"></i>
+                            <h5>
+                                <span class="en-text">Port Said Center</span>
+                                <span class="ar-text">مركز بورسعيد</span>
+                            </h5>
+                        </div>
+                        <div class="center-content">
+                            <p><i class="fas fa-map-marker-alt"></i> <span class="en-text">Port Said, Egypt</span><span class="ar-text">بورسعيد، مصر</span></p>
+                            <p><i class="fas fa-location-arrow"></i> 31.2667° N, 32.3000° E</p>
+                            <p><i class="fas fa-phone"></i> +20 66 1234 5678</p>
+                            <p><i class="fas fa-envelope"></i> portsaid@arabcontractors.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="1300">
+                    <div class="center-card">
+                        <div class="center-header">
+                            <i class="fas fa-map-pin"></i>
+                            <h5>
+                                <span class="en-text">Suez Center</span>
+                                <span class="ar-text">مركز السويس</span>
+                            </h5>
+                        </div>
+                        <div class="center-content">
+                            <p><i class="fas fa-map-marker-alt"></i> <span class="en-text">Suez, Egypt</span><span class="ar-text">السويس، مصر</span></p>
+                            <p><i class="fas fa-location-arrow"></i> 29.9668° N, 32.5498° E</p>
+                            <p><i class="fas fa-phone"></i> +20 62 1234 5678</p>
+                            <p><i class="fas fa-envelope"></i> suez@arabcontractors.com</p>
                         </div>
                     </div>
                 </div>
@@ -625,7 +764,7 @@
                                 <span class="en-text">Sustainability</span>
                                 <span class="ar-text">الاستدامة</span>
                             </a></li>
-                        <li><a href="#contact" class="text-white text-decoration-none">
+                        <li><a href="contact.html" class="text-white text-decoration-none">
                                 <span class="en-text">Contact</span>
                                 <span class="ar-text">اتصل بنا</span>
                             </a></li>
