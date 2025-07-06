@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leadership | Arab Contractors | المقاولون العرب</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <!-- Logo and Brand -->
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <div class="logo-container me-3 bg-white">
+                    <div class="logo-animated-container">
+                        <img src="logo.png" alt="logo" class="img-fluid">
+                    </div>
+                </div>
+                <div class="brand-text">
+                    <div class="en-text">Arab Contractors</div>
+                    <div class="ar-text"><span id="animated-arabic-name"></span></div>
+                </div>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#home" data-i18n="nav.home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about" data-i18n="nav.about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="leadership.html" data-i18n="nav.leadership">Leadership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#sustainability" data-i18n="nav.sustainability">Sustainability</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact" data-i18n="nav.contact">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Language and Theme Toggles -->
+                <div class="navbar-controls d-flex align-items-center ms-3">
+                    <button id="langToggle" class="btn btn-outline-light btn-sm me-2" title="Toggle Language">
+                        <span class="en-text">AR</span>
+                        <span class="ar-text">EN</span>
+                    </button>
+                    <button id="themeToggle" class="btn btn-outline-light btn-sm" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand mb-4">
+                        <div class="logo-container mb-3">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h5>
+                            <span class="en-text">Arab Contractors</span>
+                            <span class="ar-text">المقاولون العرب</span>
+                        </h5>
+                        <p class="text-white">
+                            <span class="en-text">Building excellence since 1955</span>
+                            <span class="ar-text">نبني التميز منذ 1955</span>
+                        </p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-instagram"></i></a>
+                </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="mb-3">
+                        <span class="en-text">Quick Links</span>
+                        <span class="ar-text">روابط سريعة</span>
+                    </h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html#home" class="text-white text-decoration-none">
+                            <span class="en-text">Home</span>
+                            <span class="ar-text">الرئيسية</span>
+                        </a></li>
+                        <li><a href="index.html#about" class="text-white text-decoration-none">
+                            <span class="en-text">About</span>
+                            <span class="ar-text">عن الشركة</span>
+                        </a></li>
+                        <li><a href="leadership.html" class="text-white text-decoration-none">
+                            <span class="en-text">Leadership</span>
+                            <span class="ar-text">القيادة</span>
+                        </a></li>
+                        <li><a href="index.html#sustainability" class="text-white text-decoration-none">
+                            <span class="en-text">Sustainability</span>
+                            <span class="ar-text">الاستدامة</span>
+                        </a></li>
+                        <li><a href="index.html#contact" class="text-white text-decoration-none">
+                            <span class="en-text">Contact</span>
+                            <span class="ar-text">اتصل بنا</span>
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 text-white">
+                    <h6 class="mb-3">
+                        <span class="en-text">Services</span>
+                        <span class="ar-text">الخدمات</span>
+                    </h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">
+                            <span class="en-text">Infrastructure Development</span>
+                            <span class="ar-text">تطوير البنية التحتية</span>
+                        </a></li>
+                        <li><a href="#" class="text-white text-decoration-none">
+                            <span class="en-text">Commercial Construction</span>
+                            <span class="ar-text">البناء التجاري</span>
+                        </a></li>
+                        <li><a href="#" class="text-white text-decoration-none">
+                            <span class="en-text">Residential Projects</span>
+                            <span class="ar-text">المشاريع السكنية</span>
+                        </a></li>
+                        <li><a href="#" class="text-white text-decoration-none">
+                            <span class="en-text">Engineering Consulting</span>
+                            <span class="ar-text">الاستشارات الهندسية</span>
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h6 class="mb-3">
+                        <span class="en-text">Contact Info</span>
+                        <span class="ar-text">معلومات الاتصال</span>
+                    </h6>
+                    <div class="contact-info">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>
+                            <span class="en-text">Cairo, Egypt</span>
+                            <span class="ar-text">القاهرة، مصر</span>
+                        </p>
+                        <p class="mb-2"><i class="fas fa-phone me-2"></i>+20 2 1234 5678</p>
+                        <p class="mb-2"><i class="fas fa-envelope me-2"></i>info@arabcontractors.com</p>
+                    </div>
+                    </div>
+                </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-white">
+                        <span class="en-text">&copy; 2024 Arab Contractors. All rights reserved.</span>
+                        <span class="ar-text">&copy; 2024 المقاولون العرب. جميع الحقوق محفوظة.</span>
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white text-decoration-none me-3">
+                        <span class="en-text">Privacy Policy</span>
+                        <span class="ar-text">سياسة الخصوصية</span>
+                    </a>
+                    <a href="#" class="text-white text-decoration-none">
+                        <span class="en-text">Terms of Service</span>
+                        <span class="ar-text">شروط الخدمة</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Leadership Details Modal -->
+    <div class="modal fade" id="leadershipDetailsModal" tabindex="-1" aria-labelledby="leadershipDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="leadershipDetailsModalLabel">
+                        <span class="en-text">Leadership Profile</span>
+                        <span class="ar-text">الملف الشخصي للقيادة</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="leader-profile-card">
+                                <div class="leader-image-container mb-4">
+                                    <img src="" class="leader-profile-image" alt="Leader Profile">
+                                    <div class="leader-badge">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="leader-basic-info">
+                                    <h3 class="leader-name mb-2"></h3>
+                                    <h5 class="leader-position mb-3"></h5>
+                                    
+                                    <div class="leader-contact-info">
+                                        <div class="contact-item">
+                                            <i class="fas fa-envelope"></i>
+                                            <span class="leader-email"></span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <i class="fas fa-phone"></i>
+                                            <span class="leader-phone"></span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span class="leader-location"></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="leader-social-links mt-4">
+                                        <a href="#" class="btn btn-outline-primary btn-sm me-2">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-outline-primary btn-sm me-2">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-outline-primary btn-sm">
+                                            <i class="fas fa-globe"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-8">
+                            <div class="leader-timeline-container">
+                                <h4 class="timeline-title mb-4">
+                                    <i class="fas fa-history me-2"></i>
+                                    <span class="en-text">Personal History & Career Timeline</span>
+                                    <span class="ar-text">تاريخ حياته ومسيرته العملية العلمية</span>
+                                </h4>
+                                
+                                <div class="timeline">
+                                    <!-- Timeline items will be populated by JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+
+    <!-- Leadership Modal JavaScript -->
+    <script>
+        // Enhanced Leadership data with career details
+        const leadershipData = {
+            ceo: {
+                name: {
+                    en: 'Eng. Ahmed Hassan',
+                    ar: 'م. أحمد حسن'
+                },
+                position: {
+                    en: 'Chief Executive Officer',
+                    ar: 'الرئيس التنفيذي'
+                },
+                image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                email: 'ahmed.hassan@arabcontractors.com',
+                phone: '+20 2 1234 5678',
+                location: {
+                    en: 'Cairo, Egypt',
+                    ar: 'القاهرة، مصر'
+                },
+                bio: {
+                    en: 'Leading Arab Contractors with over 25 years of experience in construction and engineering. Visionary leader driving innovation and sustainable growth across the Middle East region.',
+                    ar: 'يقود المقاولون العرب بأكثر من 25 عاماً من الخبرة في البناء والهندسة. قائد مبدع يقود الابتكار والنمو المستدام عبر منطقة الشرق الأوسط.'
+                },
+                education: [
+                    {
+                        title: { en: 'Master of Business Administration', ar: 'ماجستير في إدارة الأعمال' },
+                        institution: { en: 'Cairo University', ar: 'جامعة القاهرة' },
+                        date: '2005-2007',
+                        description: { en: 'Specialized in Construction Management and Strategic Leadership', ar: 'تخصص في إدارة البناء والقيادة الاستراتيجية' }
+                    },
+                    {
+                        title: { en: 'Bachelor of Civil Engineering', ar: 'بكالوريوس الهندسة المدنية' },
+                        institution: { en: 'Ain Shams University', ar: 'جامعة عين شمس' },
+                        date: '1995-1999',
+                        description: { en: 'First Class Honours with distinction in Structural Engineering', ar: 'درجة الشرف الأولى مع تميز في الهندسة الإنشائية' }
+                    }
+                ],
+                experience: [
+                    {
+                        title: { en: 'Chief Executive Officer', ar: 'الرئيس التنفيذي' },
+                        company: { en: 'Arab Contractors', ar: 'المقاولون العرب' },
+                        date: '2018-Present',
+                        description: { en: 'Leading strategic direction and overseeing all company operations across the Middle East region', ar: 'قيادة الاتجاه الاستراتيجي والإشراف على جميع عمليات الشركة عبر منطقة الشرق الأوسط' }
+                    },
+                    {
+                        title: { en: 'Chief Operations Officer', ar: 'الرئيس التنفيذي للعمليات' },
+                        company: { en: 'Arab Contractors', ar: 'المقاولون العرب' },
+                        date: '2010-2018',
+                        description: { en: 'Managed major infrastructure projects and operational excellence initiatives', ar: 'إدارة مشاريع البنية التحتية الكبرى ومبادرات التميز التشغيلي' }
+                    },
+                    {
+                        title: { en: 'Senior Project Manager', ar: 'مدير مشروع أول' },
+                        company: { en: 'Arab Contractors', ar: 'المقاولون العرب' },
+                        date: '2005-2010',
+                        description: { en: 'Led multiple high-value construction projects across Egypt and the region', ar: 'قيادة مشاريع بناء متعددة عالية القيمة عبر مصر والمنطقة' }
+                    }
+                ],
+                achievements: [
+                    {
+                        title: { en: 'Construction Excellence Award', ar: 'جائزة التميز في البناء' },
+                        organization: { en: 'Middle East Construction Federation', ar: 'اتحاد البناء في الشرق الأوسط' },
+                        date: '2022',
+                        description: { en: 'Recognized for outstanding leadership in sustainable construction practices', ar: 'تقدير للقيادة المتميزة في ممارسات البناء المستدام' }
+                    },
+                    {
+                        title: { en: 'Best CEO Award', ar: 'جائزة أفضل رئيس تنفيذي' },
+                        organization: { en: 'Egyptian Business Council', ar: 'المجلس المصري للأعمال' },
+                        date: '2021',
+                        description: { en: 'Awarded for exceptional business leadership and innovation', ar: 'منح لقيادة الأعمال المتميزة والابتكار' }
+                    }
+                ],
+                skills: [
+                    { name: { en: 'Strategic Leadership', ar: 'القيادة الاستراتيجية' }, icon: 'fas fa-chess-king', level: 95 },
+                    { name: { en: 'Project Management', ar: 'إدارة المشاريع' }, icon: 'fas fa-project-diagram', level: 90 },
+                    { name: { en: 'Construction Engineering', ar: 'الهندسة الإنشائية' }, icon: 'fas fa-hard-hat', level: 88 },
+                    { name: { en: 'Financial Management', ar: 'الإدارة المالية' }, icon: 'fas fa-chart-line', level: 85 },
+                    { name: { en: 'Team Building', ar: 'بناء الفرق' }, icon: 'fas fa-users', level: 92 },
+                    { name: { en: 'Innovation Strategy', ar: 'استراتيجية الابتكار' }, icon: 'fas fa-lightbulb', level: 87 }
+                ]
+            },
+            cfo: {
+                name: {
+                    en: 'Dr. Sarah Al-Mansouri',
+                    ar: 'د. سارة المنصوري'
+                },
+                position: {
+                    en: 'Chief Financial Officer',
+                    ar: 'الرئيس المالي'
+                },
+                image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                email: 'sarah.mansouri@arabcontractors.com',
+                phone: '+20 2 1234 5679',
+                location: {
+                    en: 'Cairo, Egypt',
+                    ar: 'القاهرة، مصر'
+                },
+                bio: {
+                    en: 'Expert financial strategist with PhD in Economics. Oversees all financial operations and drives strategic financial planning for sustainable growth and international expansion.',
+                    ar: 'استراتيجية مالية خبيرة حاصلة على دكتوراه في الاقتصاد. تشرف على جميع العمليات المالية وتقود التخطيط المالي الاستراتيجي للنمو المستدام والتوسع الدولي.'
+                },
+                education: [
+                    {
+                        title: { en: 'PhD in Economics', ar: 'دكتوراه في الاقتصاد' },
+                        institution: { en: 'London School of Economics', ar: 'كلية لندن للاقتصاد' },
+                        date: '2010-2014',
+                        description: { en: 'Specialized in International Finance and Economic Policy', ar: 'تخصص في التمويل الدولي والسياسة الاقتصادية' }
+                    },
+                    {
+                        title: { en: 'Master of Finance', ar: 'ماجستير في التمويل' },
+                        institution: { en: 'Cairo University', ar: 'جامعة القاهرة' },
+                        date: '2008-2010',
+                        description: { en: 'Advanced studies in Corporate Finance and Investment Management', ar: 'دراسات متقدمة في التمويل المؤسسي وإدارة الاستثمار' }
+                    },
+                    {
+                        title: { en: 'Bachelor of Economics', ar: 'بكالوريوس الاقتصاد' },
+                        institution: { en: 'Ain Shams University', ar: 'جامعة عين شمس' },
+                        date: '2004-2008',
+                        description: { en: 'First Class Honours with focus on Financial Economics', ar: 'درجة الشرف الأولى مع التركيز على الاقتصاد المالي' }
+                    }
+                ],
+                experience: [
+                    {
+                        title: { en: 'Chief Financial Officer', ar: 'الرئيس المالي' },
+                        company: { en: 'Arab Contractors', ar: 'المقاولون العرب' },
+                        date: '2018-Present',
+                        description: { en: 'Leading financial strategy and overseeing all financial operations across the company', ar: 'قيادة الاستراتيجية المالية والإشراف على جميع العمليات المالية في الشركة' }
+                    },
+                    {
+                        title: { en: 'Senior Financial Manager', ar: 'مدير مالي أول' },
+                        company: { en: 'Arab Contractors', ar: 'المقاولون العرب' },
+                        date: '2015-2018',
+                        description: { en: 'Managed financial planning and analysis for major construction projects', ar: 'إدارة التخطيط المالي والتحليل للمشاريع الإنشائية الكبرى' }
+                    },
+                    {
+                        title: { en: 'Financial Analyst', ar: 'محلل مالي' },
+                        company: { en: 'Egyptian Investment Bank', ar: 'البنك المصري للاستثمار' },
+                        date: '2010-2015',
+                        description: { en: 'Conducted financial analysis and investment research for corporate clients', ar: 'إجراء التحليل المالي وأبحاث الاستثمار للعملاء المؤسسيين' }
+                    }
+                ],
+                achievements: [
+                    {
+                        title: { en: 'Best CFO Award', ar: 'جائزة أفضل رئيس مالي' },
+                        organization: { en: 'Middle East Finance Association', ar: 'جمعية الشرق الأوسط للتمويل' },
+                        date: '2023',
+                        description: { en: 'Recognized for exceptional financial leadership and strategic planning', ar: 'تقدير للقيادة المالية المتميزة والتخطيط الاستراتيجي' }
+                    },
+                    {
+                        title: { en: 'Financial Innovation Award', ar: 'جائزة الابتكار المالي' },
+                        organization: { en: 'Egyptian Banking Institute', ar: 'المعهد المصرفي المصري' },
+                        date: '2022',
+                        description: { en: 'Awarded for implementing innovative financial systems and processes', ar: 'منح لتنفيذ أنظمة وعمليات مالية مبتكرة' }
+                    }
+                ],
+                skills: [
+                    { name: { en: 'Financial Strategy', ar: 'الاستراتيجية المالية' }, icon: 'fas fa-chart-line', level: 95 },
+                    { name: { en: 'Risk Management', ar: 'إدارة المخاطر' }, icon: 'fas fa-shield-alt', level: 90 },
+                    { name: { en: 'Investment Analysis', ar: 'تحليل الاستثمار' }, icon: 'fas fa-chart-bar', level: 88 },
+                    { name: { en: 'Corporate Finance', ar: 'التمويل المؤسسي' }, icon: 'fas fa-building', level: 92 },
+                    { name: { en: 'Financial Planning', ar: 'التخطيط المالي' }, icon: 'fas fa-calculator', level: 89 },
+                    { name: { en: 'Team Leadership', ar: 'قيادة الفريق' }, icon: 'fas fa-users-cog', level: 85 }
+                ]
+            },
+            coo: {
+                name: {
+                    en: 'Eng. Omar Khalil',
+                    ar: 'م. عمر خليل'
+                },
+                position: {
+                    en: 'Chief Operations Officer',
+                    ar: 'الرئيس التنفيذي للعمليات'
+                },
+                image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                email: 'omar.khalil@arabcontractors.com',
+                phone: '+20 2 1234 5680',
+                location: {
+                    en: 'Cairo, Egypt',
+                    ar: 'القاهرة، مصر'
+                },
+                bio: {
+                    en: 'Operations expert with 20+ years in construction management. Leads all operational activities and ensures project delivery excellence across multiple international markets.',
+                    ar: 'خبير عمليات بأكثر من 20 عاماً في إدارة البناء. يقود جميع الأنشطة التشغيلية ويضمن التميز في تسليم المشاريع عبر أسواق دولية متعددة.'
+                },
+                education: [
+                    {
+                        title: { en: 'Master of Engineering Management', ar: 'ماجستير في إدارة الهندسة' },
+                        institution: { en: 'American University in Cairo', ar: 'الجامعة الأمريكية في القاهرة' },
+                        date: '2008-2010',
+                        description: { en: 'Specialized in Construction Management and Operations Research', ar: 'تخصص في إدارة البناء وبحوث العمليات' }
+                    },
+                    {
+                        title: { en: 'Bachelor of Civil Engineering', ar: 'بكالوريوس الهندسة المدنية' },
+                        institution: { en: 'Alexandria University', ar: 'جامعة الإسكندرية' },
+                        date: '2000-2004',
+                        description: { en: 'First Class Honours with focus on Structural Engineering', ar: 'درجة الشرف الأولى مع التركيز على الهندسة الإنشائية' }
+                    }
+                ],
+                experience: [
+                    {
+                        title: { en: 'Chief Operations Officer', ar: 'الرئيس التنفيذي للعمليات' },
+                        company: { en: 'Arab Contractors', ar: 'المقاولون العرب' },
+                        date: '2015-Present',
+                        description: { en: 'Overseeing all operational activities and ensuring project delivery excellence', ar: 'الإشراف على جميع الأنشطة التشغيلية وضمان التميز في تسليم المشاريع' }
+                    },
+                    {
+                        title: { en: 'Operations Director', ar: 'مدير العمليات' },
+                        company: { en: 'Arab Contractors', ar: 'المقاولون العرب' },
+                        date: '2010-2015',
+                        description: { en: 'Managed major infrastructure projects and operational efficiency initiatives', ar: 'إدارة مشاريع البنية التحتية الكبرى ومبادرات الكفاءة التشغيلية' }
+                    },
+                    {
+                        title: { en: 'Senior Project Manager', ar: 'مدير مشروع أول' },
+                        company: { en: 'Construction Plus Ltd', ar: 'شركة البناء بلس المحدودة' },
+                        date: '2005-2010',
+                        description: { en: 'Led multiple high-value construction projects across the Middle East', ar: 'قيادة مشاريع بناء متعددة عالية القيمة عبر الشرق الأوسط' }
+                    }
+                ],
+                achievements: [
+                    {
+                        title: { en: 'Operations Excellence Award', ar: 'جائزة التميز التشغيلي' },
+                        organization: { en: 'Middle East Construction Federation', ar: 'اتحاد البناء في الشرق الأوسط' },
+                        date: '2023',
+                        description: { en: 'Recognized for outstanding operational leadership and efficiency improvements', ar: 'تقدير للقيادة التشغيلية المتميزة وتحسينات الكفاءة' }
+                    },
+                    {
+                        title: { en: 'Project Management Excellence', ar: 'التميز في إدارة المشاريع' },
+                        organization: { en: 'Project Management Institute', ar: 'معهد إدارة المشاريع' },
+                        date: '2021',
+                        description: { en: 'Awarded for exceptional project delivery and team leadership', ar: 'منح للتسليم المتميز للمشاريع وقيادة الفريق' }
+                    }
+                ],
+                skills: [
+                    { name: { en: 'Operations Management', ar: 'إدارة العمليات' }, icon: 'fas fa-cogs', level: 95 },
+                    { name: { en: 'Project Management', ar: 'إدارة المشاريع' }, icon: 'fas fa-project-diagram', level: 92 },
+                    { name: { en: 'Construction Engineering', ar: 'الهندسة الإنشائية' }, icon: 'fas fa-hard-hat', level: 88 },
+                    { name: { en: 'Team Leadership', ar: 'قيادة الفريق' }, icon: 'fas fa-users', level: 90 },
+                    { name: { en: 'Process Optimization', ar: 'تحسين العمليات' }, icon: 'fas fa-chart-line', level: 87 },
+                    { name: { en: 'Quality Control', ar: 'مراقبة الجودة' }, icon: 'fas fa-check-circle', level: 89 }
+                ]
+            },
+            cto: {
+                name: {
+                    en: 'Eng. Fatima Zahra',
+                    ar: 'م. فاطمة الزهراء'
+                },
+                position: {
+                    en: 'Chief Technology Officer',
+                    ar: 'الرئيس التنفيذي للتكنولوجيا'
+                },
+                image: 'https://images.unsplash.com/photo-1438761681033-6461a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                email: 'fatima.zahra@arabcontractors.com',
+                phone: '+20 2 1234 5681',
+                location: {
+                    en: 'Cairo, Egypt',
+                    ar: 'القاهرة، مصر'
+                },
+                bio: {
+                    en: 'Technology innovator driving digital transformation. Leads implementation of smart construction technologies, BIM solutions, and advanced project management systems.',
+                    ar: 'مبدعة تكنولوجية تقود التحول الرقمي. تقود تنفيذ تكنولوجيات البناء الذكية وحلول BIM وأنظمة إدارة المشاريع المتقدمة.'
+                },
+                education: [
+                    {
+                        title: { en: 'Master of Computer Science', ar: 'ماجستير علوم الحاسوب' },
+                        institution: { en: 'MIT', ar: 'معهد ماساتشوستس للتكنولوجيا' },
+                        date: '2012-2014',
+                        description: { en: 'Specialized in Artificial Intelligence and Software Engineering', ar: 'تخصص في الذكاء الاصطناعي وهندسة البرمجيات' }
+                    },
+                    {
+                        title: { en: 'Bachelor of Computer Engineering', ar: 'بكالوريوس هندسة الحاسوب' },
+                        institution: { en: 'Cairo University', ar: 'جامعة القاهرة' },
+                        date: '2008-2012',
+                        description: { en: 'First Class Honours with focus on Software Architecture', ar: 'درجة الشرف الأولى مع التركيز على هندسة البرمجيات' }
+                    }
+                ],
+                experience: [
+                    {
+                        title: { en: 'Chief Technology Officer', ar: 'الرئيس التنفيذي للتكنولوجيا' },
+                        company: { en: 'Arab Contractors', ar: 'المقاولون العرب' },
+                        date: '2019-Present',
+                        description: { en: 'Leading digital transformation and implementing smart construction technologies', ar: 'قيادة التحول الرقمي وتنفيذ تكنولوجيات البناء الذكية' }
+                    },
+                    {
+                        title: { en: 'Technology Director', ar: 'مدير التكنولوجيا' },
+                        company: { en: 'Arab Contractors', ar: 'المقاولون العرب' },
+                        date: '2016-2019',
+                        description: { en: 'Developed and implemented BIM solutions and project management systems', ar: 'تطوير وتنفيذ حلول BIM وأنظمة إدارة المشاريع' }
+                    },
+                    {
+                        title: { en: 'Senior Software Engineer', ar: 'مهندس برمجيات أول' },
+                        company: { en: 'Tech Solutions Inc', ar: 'شركة حلول التكنولوجيا' },
+                        date: '2014-2016',
+                        description: { en: 'Developed enterprise software solutions for construction industry', ar: 'تطوير حلول برمجية مؤسسية لصناعة البناء' }
+                    }
+                ],
+                achievements: [
+                    {
+                        title: { en: 'Digital Innovation Award', ar: 'جائزة الابتكار الرقمي' },
+                        organization: { en: 'Middle East Technology Forum', ar: 'منتدى الشرق الأوسط للتكنولوجيا' },
+                        date: '2023',
+                        description: { en: 'Recognized for outstanding contributions to digital transformation in construction', ar: 'تقدير للمساهمات المتميزة في التحول الرقمي في البناء' }
+                    },
+                    {
+                        title: { en: 'BIM Excellence Award', ar: 'جائزة التميز في BIM' },
+                        organization: { en: 'Building Information Modeling Institute', ar: 'معهد نمذجة معلومات البناء' },
+                        date: '2022',
+                        description: { en: 'Awarded for innovative BIM implementation and digital workflows', ar: 'منح لتنفيذ BIM المبتكر وسير العمل الرقمي' }
+                    }
+                ],
+                skills: [
+                    { name: { en: 'Digital Transformation', ar: 'التحول الرقمي' }, icon: 'fas fa-digital-tachograph', level: 95 },
+                    { name: { en: 'BIM Implementation', ar: 'تنفيذ BIM' }, icon: 'fas fa-cube', level: 92 },
+                    { name: { en: 'Software Architecture', ar: 'هندسة البرمجيات' }, icon: 'fas fa-code', level: 88 },
+                    { name: { en: 'Artificial Intelligence', ar: 'الذكاء الاصطناعي' }, icon: 'fas fa-brain', level: 85 },
+                    { name: { en: 'Project Management', ar: 'إدارة المشاريع' }, icon: 'fas fa-project-diagram', level: 90 },
+                    { name: { en: 'Team Leadership', ar: 'قيادة الفريق' }, icon: 'fas fa-users', level: 87 }
+                ]
+            },
+            director: {
+                name: {
+                    en: 'Eng. Khalid Al-Rashid',
+                    ar: 'م. خالد الرشيد'
+                },
+                position: {
+                    en: 'Project Director',
+                    ar: 'مدير المشروع'
+                },
+                image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                email: 'khalid.rashid@arabcontractors.com',
+                phone: '+20 2 1234 5682',
+                location: {
+                    en: 'Cairo, Egypt',
+                    ar: 'القاهرة، مصر'
+                },
+                bio: {
+                    en: 'Senior project management expert overseeing major infrastructure projects. Ensures timely delivery and quality standards across all projects with focus on sustainability.',
+                    ar: 'خبير إدارة مشاريع أول يشرف على مشاريع البنية التحتية الكبرى. يضمن التسليم في الوقت المحدد ومعايير الجودة في جميع المشاريع مع التركيز على الاستدامة.'
+                },
+                education: [
+                    {
+                        title: { en: 'Master of Project Management', ar: 'ماجستير في إدارة المشاريع' },
+                        institution: { en: 'Project Management Institute', ar: 'معهد إدارة المشاريع' },
+                        date: '2010-2012',
+                        description: { en: 'Certified Project Management Professional (PMP) with focus on construction projects', ar: 'محترف إدارة مشاريع معتمد مع التركيز على مشاريع البناء' }
+                    },
+                    {
+                        title: { en: 'Bachelor of Civil Engineering', ar: 'بكالوريوس الهندسة المدنية' },
+                        institution: { en: 'Cairo University', ar: 'جامعة القاهرة' },
+                        date: '2002-2006',
+                        description: { en: 'First Class Honours with specialization in Structural Engineering', ar: 'درجة الشرف الأولى مع التخصص في الهندسة الإنشائية' }
+                    }
+                ],
+                experience: [
+                    {
+                        title: { en: 'Project Director', ar: 'مدير المشروع' },
+                        company: { en: 'Arab Contractors', ar: 'المقاولون العرب' },
+                        date: '2018-Present',
+                        description: { en: 'Overseeing major infrastructure projects and ensuring quality standards', ar: 'الإشراف على مشاريع البنية التحتية الكبرى وضمان معايير الجودة' }
+                    },
+                    {
+                        title: { en: 'Senior Project Manager', ar: 'مدير مشروع أول' },
+                        company: { en: 'Arab Contractors', ar: 'المقاولون العرب' },
+                        date: '2012-2018',
+                        description: { en: 'Managed multiple high-value construction projects across the region', ar: 'إدارة مشاريع بناء متعددة عالية القيمة عبر المنطقة' }
+                    },
+                    {
+                        title: { en: 'Project Engineer', ar: 'مهندس مشروع' },
+                        company: { en: 'Construction Solutions Ltd', ar: 'شركة حلول البناء المحدودة' },
+                        date: '2006-2012',
+                        description: { en: 'Led technical aspects of construction projects and quality control', ar: 'قيادة الجوانب التقنية لمشاريع البناء ومراقبة الجودة' }
+                    }
+                ],
+                achievements: [
+                    {
+                        title: { en: 'Project Excellence Award', ar: 'جائزة التميز في المشاريع' },
+                        organization: { en: 'Middle East Project Management Association', ar: 'جمعية الشرق الأوسط لإدارة المشاريع' },
+                        date: '2023',
+                        description: { en: 'Recognized for outstanding project delivery and quality management', ar: 'تقدير للتسليم المتميز للمشاريع وإدارة الجودة' }
+                    },
+                    {
+                        title: { en: 'Sustainability Leadership Award', ar: 'جائزة قيادة الاستدامة' },
+                        organization: { en: 'Green Building Council', ar: 'مجلس البناء الأخضر' },
+                        date: '2022',
+                        description: { en: 'Awarded for implementing sustainable practices in construction projects', ar: 'منح لتنفيذ الممارسات المستدامة في مشاريع البناء' }
+                    }
+                ],
+                skills: [
+                    { name: { en: 'Project Management', ar: 'إدارة المشاريع' }, icon: 'fas fa-project-diagram', level: 95 },
+                    { name: { en: 'Quality Control', ar: 'مراقبة الجودة' }, icon: 'fas fa-check-circle', level: 92 },
+                    { name: { en: 'Construction Engineering', ar: 'الهندسة الإنشائية' }, icon: 'fas fa-hard-hat', level: 88 },
+                    { name: { en: 'Team Leadership', ar: 'قيادة الفريق' }, icon: 'fas fa-users', level: 90 },
+                    { name: { en: 'Risk Management', ar: 'إدارة المخاطر' }, icon: 'fas fa-shield-alt', level: 87 },
+                    { name: { en: 'Sustainability', ar: 'الاستدامة' }, icon: 'fas fa-leaf', level: 85 }
+                ]
+            },
+            hr: {
+                name: {
+                    en: 'Dr. Layla Al-Zahra',
+                    ar: 'د. ليلى الزهراء'
+                },
+                position: {
+                    en: 'Human Resources Director',
+                    ar: 'مديرة الموارد البشرية'
+                },
+                image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                email: 'layla.zahra@arabcontractors.com',
+                phone: '+20 2 1234 5683',
+                location: {
+                    en: 'Cairo, Egypt',
+                    ar: 'القاهرة، مصر'
+                },
+                bio: {
+                    en: 'HR strategist focused on talent development and organizational culture. Drives employee engagement and professional growth initiatives across diverse international teams.',
+                    ar: 'استراتيجية موارد بشرية تركز على تطوير المواهب والثقافة التنظيمية. تقود مبادرات مشاركة الموظفين والنمو المهني عبر فرق دولية متنوعة.'
+                },
+                education: [
+                    {
+                        title: { en: 'PhD in Organizational Psychology', ar: 'دكتوراه في علم النفس التنظيمي' },
+                        institution: { en: 'Harvard University', ar: 'جامعة هارفارد' },
+                        date: '2012-2016',
+                        description: { en: 'Specialized in Leadership Development and Organizational Culture', ar: 'تخصص في تطوير القيادة والثقافة التنظيمية' }
+                    },
+                    {
+                        title: { en: 'Master of Human Resources', ar: 'ماجستير الموارد البشرية' },
+                        institution: { en: 'Cairo University', ar: 'جامعة القاهرة' },
+                        date: '2010-2012',
+                        description: { en: 'Advanced studies in HR Management and Talent Development', ar: 'دراسات متقدمة في إدارة الموارد البشرية وتطوير المواهب' }
+                    },
+                    {
+                        title: { en: 'Bachelor of Psychology', ar: 'بكالوريوس علم النفس' },
+                        institution: { en: 'Ain Shams University', ar: 'جامعة عين شمس' },
+                        date: '2006-2010',
+                        description: { en: 'First Class Honours with focus on Industrial Psychology', ar: 'درجة الشرف الأولى مع التركيز على علم النفس الصناعي' }
+                    }
+                ],
+                experience: [
+                    {
+                        title: { en: 'Human Resources Director', ar: 'مديرة الموارد البشرية' },
+                        company: { en: 'Arab Contractors', ar: 'المقاولون العرب' },
+                        date: '2018-Present',
+                        description: { en: 'Leading HR strategy and talent development across international teams', ar: 'قيادة استراتيجية الموارد البشرية وتطوير المواهب عبر الفرق الدولية' }
+                    },
+                    {
+                        title: { en: 'Senior HR Manager', ar: 'مدير موارد بشرية أول' },
+                        company: { en: 'Arab Contractors', ar: 'المقاولون العرب' },
+                        date: '2016-2018',
+                        description: { en: 'Managed recruitment, training, and employee engagement programs', ar: 'إدارة برامج التوظيف والتدريب ومشاركة الموظفين' }
+                    },
+                    {
+                        title: { en: 'HR Consultant', ar: 'مستشارة موارد بشرية' },
+                        company: { en: 'Global HR Solutions', ar: 'حلول الموارد البشرية العالمية' },
+                        date: '2012-2016',
+                        description: { en: 'Provided HR consulting services to multinational corporations', ar: 'تقديم خدمات استشارية في الموارد البشرية للشركات متعددة الجنسيات' }
+                    }
+                ],
+                achievements: [
+                    {
+                        title: { en: 'HR Excellence Award', ar: 'جائزة التميز في الموارد البشرية' },
+                        organization: { en: 'Middle East HR Association', ar: 'جمعية الشرق الأوسط للموارد البشرية' },
+                        date: '2023',
+                        description: { en: 'Recognized for outstanding HR leadership and talent development', ar: 'تقدير للقيادة المتميزة في الموارد البشرية وتطوير المواهب' }
+                    },
+                    {
+                        title: { en: 'Diversity & Inclusion Award', ar: 'جائزة التنوع والشمول' },
+                        organization: { en: 'International HR Council', ar: 'المجلس الدولي للموارد البشرية' },
+                        date: '2022',
+                        description: { en: 'Awarded for promoting diversity and inclusion in the workplace', ar: 'منح لتعزيز التنوع والشمول في مكان العمل' }
+                    }
+                ],
+                skills: [
+                    { name: { en: 'Talent Development', ar: 'تطوير المواهب' }, icon: 'fas fa-user-graduate', level: 95 },
+                    { name: { en: 'Organizational Culture', ar: 'الثقافة التنظيمية' }, icon: 'fas fa-building', level: 90 },
+                    { name: { en: 'Employee Engagement', ar: 'مشاركة الموظفين' }, icon: 'fas fa-users', level: 88 },
+                    { name: { en: 'Leadership Development', ar: 'تطوير القيادة' }, icon: 'fas fa-chess-king', level: 92 },
+                    { name: { en: 'Diversity & Inclusion', ar: 'التنوع والشمول' }, icon: 'fas fa-hands-helping', level: 87 },
+                    { name: { en: 'Strategic HR', ar: 'الموارد البشرية الاستراتيجية' }, icon: 'fas fa-chart-line', level: 89 }
+                ]
+            }
+        };
+
+        // Store current leader ID for language updates
+        let currentLeaderId = null;
+
+        // Enhanced open leadership modal
+        function openLeadershipModal(leaderId) {
+            const leader = leadershipData[leaderId];
+            if (!leader) return;
+
+            // Store current leader ID
+            currentLeaderId = leaderId;
+
+            // Update modal content
+            updateModalContent(leader);
+            
+            // Show modal
+            $('#leadershipModal').addClass('show');
+            $('body').addClass('modal-open');
+        }
+
+        // Function to update modal content
+        function updateModalContent(leader) {
+            const currentLang = $('html').attr('lang') || 'en';
+            const isRTL = currentLang === 'ar';
+
+            // Update modal content
+            $('#modalLeaderImage').attr('src', leader.image);
+            $('#modalLeaderName').html(`
+                <span class="en-text">${leader.name.en}</span>
+                <span class="ar-text">${leader.name.ar}</span>
+            `);
+            $('#modalLeaderPosition').html(`
+                <span class="en-text">${leader.position.en}</span>
+                <span class="ar-text">${leader.position.ar}</span>
+            `);
+            $('#modalLeaderBio').html(`
+                <span class="en-text">${leader.bio.en}</span>
+                <span class="ar-text">${leader.bio.ar}</span>
+            `);
+            $('#modalLeaderEmail').text(leader.email);
+            $('#modalLeaderPhone').text(leader.phone);
+            $('#modalLeaderLocation').html(`
+                <span class="en-text">${leader.location.en}</span>
+                <span class="ar-text">${leader.location.ar}</span>
+            `);
+
+            // Populate Education Timeline
+            if (leader.education) {
+                const educationHtml = leader.education.map(item => `
+                    <div class="timeline-item">
+                        <div class="timeline-item-header">
+                            <h5 class="timeline-item-title">
+                                <span class="en-text">${item.title.en}</span>
+                                <span class="ar-text">${item.title.ar}</span>
+                            </h5>
+                            <span class="timeline-item-date">${item.date}</span>
+                        </div>
+                        <div class="timeline-item-subtitle">
+                            <span class="en-text">${item.institution.en}</span>
+                            <span class="ar-text">${item.institution.ar}</span>
+                        </div>
+                        <div class="timeline-item-description">
+                            <span class="en-text">${item.description.en}</span>
+                            <span class="ar-text">${item.description.ar}</span>
+                        </div>
+                    </div>
+                `).join('');
+                $('#educationTimeline').html(educationHtml);
+            } else {
+                $('#educationTimeline').html('<p class="text-muted">No education data available</p>');
+            }
+
+            // Populate Experience Timeline
+            if (leader.experience) {
+                const experienceHtml = leader.experience.map(item => `
+                    <div class="timeline-item">
+                        <div class="timeline-item-header">
+                            <h5 class="timeline-item-title">
+                                <span class="en-text">${item.title.en}</span>
+                                <span class="ar-text">${item.title.ar}</span>
+                            </h5>
+                            <span class="timeline-item-date">${item.date}</span>
+                        </div>
+                        <div class="timeline-item-subtitle">
+                            <span class="en-text">${item.company.en}</span>
+                            <span class="ar-text">${item.company.ar}</span>
+                        </div>
+                        <div class="timeline-item-description">
+                            <span class="en-text">${item.description.en}</span>
+                            <span class="ar-text">${item.description.ar}</span>
+                        </div>
+                    </div>
+                `).join('');
+                $('#experienceTimeline').html(experienceHtml);
+            } else {
+                $('#experienceTimeline').html('<p class="text-muted">No experience data available</p>');
+            }
+
+            // Populate Achievements Timeline
+            if (leader.achievements) {
+                const achievementsHtml = leader.achievements.map(item => `
+                    <div class="timeline-item">
+                        <div class="timeline-item-header">
+                            <h5 class="timeline-item-title">
+                                <span class="en-text">${item.title.en}</span>
+                                <span class="ar-text">${item.title.ar}</span>
+                            </h5>
+                            <span class="timeline-item-date">${item.date}</span>
+                        </div>
+                        <div class="timeline-item-subtitle">
+                            <span class="en-text">${item.organization.en}</span>
+                            <span class="ar-text">${item.organization.ar}</span>
+                        </div>
+                        <div class="timeline-item-description">
+                            <span class="en-text">${item.description.en}</span>
+                            <span class="ar-text">${item.description.ar}</span>
+                        </div>
+                    </div>
+                `).join('');
+                $('#achievementsTimeline').html(achievementsHtml);
+            } else {
+                $('#achievementsTimeline').html('<p class="text-muted">No achievements data available</p>');
+            }
+
+            // Populate Skills Grid
+            if (leader.skills) {
+                const skillsHtml = leader.skills.map(skill => `
+                    <div class="skill-item">
+                        <i class="${skill.icon}"></i>
+                        <h6>
+                            <span class="en-text">${skill.name.en}</span>
+                            <span class="ar-text">${skill.name.ar}</span>
+                        </h6>
+                        <div class="skill-level">
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: ${skill.level}%"></div>
+                            </div>
+                            <span class="skill-percentage">${skill.level}%</span>
+                        </div>
+                    </div>
+                `).join('');
+                $('#skillsContainer').html(skillsHtml);
+            } else {
+                $('#skillsContainer').html('<p class="text-muted">No skills data available</p>');
+            }
+
+            // Update language visibility
+            updateModalLanguage(isRTL);
+        }
+
+        // Function to update modal language visibility
+        function updateModalLanguage(isRTL) {
+            if (isRTL) {
+                $('.en-text').hide();
+                $('.ar-text').show();
+            } else {
+                $('.en-text').show();
+                $('.ar-text').hide();
+            }
+        }
+
+        // Close leadership modal
+        function closeLeadershipModal() {
+            $('#leadershipModal').removeClass('show');
+            $('body').removeClass('modal-open');
+        }
+
+        // Event listeners for circular leadership cards
+        $(document).ready(function() {
+            // CEO card click
+            $('.ceo-card-advanced').on('click', function() {
+                openLeadershipModal('ceo');
+            });
+
+            // Team member cards click
+            $('.team-member-card').on('click', function() {
+                const leaderId = $(this).data('leader');
+                openLeadershipModal(leaderId);
+            });
+
+            // Close modal on background click
+            $('#leadershipModal').on('click', function(e) {
+                if (e.target === this) {
+                    closeLeadershipModal();
+                }
+            });
+
+            // Close modal on escape key
+            $(document).on('keydown', function(e) {
+                if (e.key === 'Escape' && $('#leadershipModal').hasClass('show')) {
+                    closeLeadershipModal();
+                }
+            });
+        });
+
+        // Brand Animation Functionality
+        function animateBrandName() {
+            var isArabic = $("html").attr("dir") === "rtl";
+            var name = isArabic ? "المقاولون العرب" : "Arab Contractors";
+            var container = isArabic ? $("#animated-arabic-name") : $(".brand-text .en-text");
+            var logo = $(".logo-container img");
+            container.empty();
+            if (isArabic) {
+                // Arabic: animate whole text with a beautiful effect
+                var span = $("<span>")
+                    .addClass("arabic-brand-animate")
+                    .text(name);
+                container.append(span);
+                // Animate: fade in, scale up, gold color
+                setTimeout(function() {
+                    span.addClass("visible");
+                    logo.addClass("logo-rotate");
+                    setTimeout(function() { logo.removeClass("logo-rotate"); }, 700);
+                }, 100);
+            } else {
+                // English: animate letter by letter
+                var chars = name.split("");
+                chars.forEach(function(char, i) {
+                    var span = $("<span>")
+                        .addClass("animated-letter en")
+                        .text(char);
+                    container.append(span);
+                });
+                var letters = container.find(".animated-letter");
+                letters.each(function(index) {
+                    setTimeout(() => {
+                        $(this).addClass("visible");
+                        logo.addClass("logo-rotate");
+                        setTimeout(() => logo.removeClass("logo-rotate"), 700);
+                    }, 120 * index);
+                });
+            }
+        }
+
+        // Initialize brand animation when page loads
+        $(document).ready(function() {
+            // Run brand animation
+            animateBrandName();
+            
+            // Re-run when language toggled
+            $("#langToggle").on("click", function() {
+                setTimeout(function() {
+                    animateBrandName();
+                }, 350);
+            });
+
+            // Language toggle functionality
+            $("#langToggle").on("click", function() {
+                const currentDir = $("html").attr("dir");
+                const newDir = currentDir === "rtl" ? "ltr" : "rtl";
+                const newLang = newDir === "rtl" ? "ar" : "en";
+                
+                $("html").attr("dir", newDir);
+                $("html").attr("lang", newLang);
+                
+                // Toggle text visibility
+                if (newDir === "rtl") {
+                    $(".en-text").hide();
+                    $(".ar-text").show();
+                } else {
+                    $(".en-text").show();
+                    $(".ar-text").hide();
+                }
+                
+                // Update modal content if modal is open
+                if (currentLeaderId && $('#leadershipModal').hasClass('show')) {
+                    const leader = leadershipData[currentLeaderId];
+                    if (leader) {
+                        updateModalContent(leader);
+                    }
+                }
+                
+                // Re-run brand animation
+                setTimeout(function() {
+                    animateBrandName();
+                }, 350);
+            });
+
+            // Theme toggle functionality
+            $("#themeToggle").on("click", function() {
+                $("body").toggleClass("dark-mode");
+                const icon = $(this).find("i");
+                if ($("body").hasClass("dark-mode")) {
+                    icon.removeClass("fa-moon").addClass("fa-sun");
+                } else {
+                    icon.removeClass("fa-sun").addClass("fa-moon");
+                }
+            });
+
+            // Navbar scroll effect
+            $(window).on("scroll", function() {
+                if ($(window).scrollTop() > 50) {
+                    $("#mainNavbar").addClass("scrolled");
+                } else {
+                    $("#mainNavbar").removeClass("scrolled");
+                }
+            });
+
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    easing: 'ease-in-out',
+                    once: true
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

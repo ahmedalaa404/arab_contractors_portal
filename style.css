@@ -1718,7 +1718,7 @@ body.dark-mode .category-title {
     background: none !important;
     box-shadow: none !important;
     filter: blur(2px);
-    color: var(--primary-gold);
+    color: #fff !important;
     font-weight: bold;
     font-size: 1.3em;
     letter-spacing: 0.05em;
@@ -1778,13 +1778,844 @@ body.dark-mode .category-title {
     filter: blur(0);
 }
 
-/* ===== Animated Loading Spinner Border on Hover ===== */
+/* ===== Advanced Leadership Section ===== */
+.leadership-advanced {
+    background: linear-gradient(135deg, var(--light-gray) 0%, #f0f0f0 100%);
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.leadership-advanced::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="leadership-pattern" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23B89D4F" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23leadership-pattern)"/></svg>');
+    opacity: 0.3;
+    animation: float 20s ease-in-out infinite;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    place-items: center;
+}
+
+/* CEO positioned in center */
+.ceo-card-advanced {
+    grid-column: 2;
+    grid-row: 2;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 15px 35px rgba(184, 157, 79, 0.3);
+    z-index: 3;
+    animation: ceoFloat 3s ease-in-out infinite;
+}
+
+@keyframes ceoFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.ceo-card-advanced::before {
+    content: 'CEO';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--white);
+    color: var(--primary-gold);
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    z-index: 4;
+    transition: all 0.3s ease;
+}
+
+.ceo-card-advanced:hover {
+    transform: scale(1.15) translateY(-5px);
+    box-shadow: 0 30px 60px rgba(184, 157, 79, 0.5);
+    animation: none;
+}
+
+.ceo-card-advanced:hover::before {
+    transform: translateX(-50%) scale(1.1);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.ceo-card-advanced .ceo-image {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--white);
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.ceo-card-advanced:hover .ceo-image {
+    transform: scale(1.1);
+    border-color: var(--primary-gold);
+}
+
+.ceo-card-advanced .ceo-name {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.ceo-card-advanced:hover .ceo-name {
+    transform: scale(1.05);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* CEO Card - Central and Larger */
+.ceo-card-advanced {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 15px 35px rgba(184, 157, 79, 0.3);
+    z-index: 3;
+}
+
+.ceo-card-advanced::before {
+    content: 'CEO';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--white);
+    color: var(--primary-gold);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 4;
+}
+
+.ceo-card-advanced:hover {
+    transform: scale(1.1);
+    box-shadow: 0 25px 50px rgba(184, 157, 79, 0.4);
+}
+
+.ceo-card-advanced .ceo-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.ceo-card-advanced .ceo-name {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Team Member Cards - Positioned around CEO */
+.team-member-card {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+    animation: memberFloat 4s ease-in-out infinite;
+}
+
+/* Position team members around CEO */
+.team-member-card:nth-child(2) { /* CFO - Top */
+    grid-column: 2;
+    grid-row: 1;
+    animation-delay: 0.5s;
+}
+
+.team-member-card:nth-child(3) { /* COO - Top Right */
+    grid-column: 3;
+    grid-row: 1;
+    animation-delay: 1s;
+}
+
+.team-member-card:nth-child(4) { /* CTO - Right */
+    grid-column: 3;
+    grid-row: 2;
+    animation-delay: 1.5s;
+}
+
+.team-member-card:nth-child(5) { /* Director - Bottom Right */
+    grid-column: 3;
+    grid-row: 3;
+    animation-delay: 2s;
+}
+
+.team-member-card:nth-child(6) { /* HR - Bottom */
+    grid-column: 2;
+    grid-row: 3;
+    animation-delay: 2.5s;
+}
+
+.team-member-card:nth-child(7) { /* Additional - Bottom Left */
+    grid-column: 1;
+    grid-row: 3;
+    animation-delay: 3s;
+}
+
+@keyframes memberFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(2deg); }
+}
+
+.team-member-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 50%;
+}
+
+.team-member-card:hover {
+    transform: scale(1.2) translateY(-10px) rotate(5deg);
+    box-shadow: 0 25px 50px rgba(184, 157, 79, 0.4);
+    border-color: var(--primary-gold);
+    animation: none;
+}
+
+.team-member-card:hover::before {
+    opacity: 0.15;
+}
+
+.team-member-card:hover .member-image {
+    border-color: var(--white);
+    transform: scale(1.15);
+    box-shadow: 0 8px 20px rgba(184, 157, 79, 0.3);
+}
+
+.team-member-card:hover .member-name {
+    color: var(--primary-gold);
+    transform: scale(1.05);
+    text-shadow: 0 2px 4px rgba(184, 157, 79, 0.2);
+}
+
+.team-member-card .member-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-gold);
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.team-member-card:hover .member-image {
+    border-color: var(--white);
+    transform: scale(1.1);
+}
+
+.team-member-card .member-name {
+    color: var(--dark-charcoal);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.team-member-card:hover .member-name {
+    color: var(--primary-gold);
+}
+
+/* Leadership Modal */
+.leadership-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.leadership-modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.leadership-modal-content {
+    background: var(--white);
+    border-radius: 20px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.7);
+    transition: transform 0.3s ease;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+}
+
+.leadership-modal.show .leadership-modal-content {
+    transform: scale(1);
+}
+
+.leadership-modal-header {
+    background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+}
+
+.leadership-modal-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="modal-pattern" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23modal-pattern)"/></svg>');
+    opacity: 0.3;
+    border-radius: 20px 20px 0 0;
+}
+
+.leadership-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--white);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--dark-charcoal);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.leadership-modal-close:hover {
+    background: var(--dark-charcoal);
+    color: var(--white);
+    transform: rotate(90deg);
+}
+
+.leadership-modal-body {
+    padding: 2rem;
+}
+
+.leader-profile-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(184, 157, 79, 0.1);
+}
+
+.leader-profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-gold);
+    box-shadow: 0 10px 25px rgba(184, 157, 79, 0.3);
+}
+
+.leader-profile-info h3 {
+    color: var(--dark-charcoal);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.leader-profile-info .position {
+    color: var(--primary-gold);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.leader-profile-info .bio {
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.leader-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.leader-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.leader-contact-item i {
+    color: var(--primary-gold);
+    width: 16px;
+}
+
+/* Enhanced Modal Styles */
+.career-timeline-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid rgba(184, 157, 79, 0.1);
+}
+
+.timeline-title {
+    color: var(--dark-charcoal);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.timeline-title i {
+    color: var(--primary-gold);
+    font-size: 1.1rem;
+}
+
+.timeline-container {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--primary-gold), var(--secondary-gold));
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(184, 157, 79, 0.05);
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-gold);
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+    background: rgba(184, 157, 79, 0.1);
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(184, 157, 79, 0.2);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.5rem;
+    top: 1.5rem;
+    width: 12px;
+    height: 12px;
+    background: var(--primary-gold);
+    border-radius: 50%;
+    border: 3px solid var(--white);
+    box-shadow: 0 2px 8px rgba(184, 157, 79, 0.3);
+}
+
+.timeline-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item-title {
+    font-weight: 700;
+    color: var(--dark-charcoal);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.timeline-item-date {
+    color: var(--primary-gold);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.timeline-item-subtitle {
+    color: var(--text-light);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.timeline-item-description {
+    color: var(--text-dark);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skill-item {
+    background: var(--white);
+    border: 2px solid rgba(184, 157, 79, 0.2);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(184, 157, 79, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.skill-item:hover {
+    border-color: var(--primary-gold);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(184, 157, 79, 0.2);
+}
+
+.skill-item:hover::before {
+    left: 100%;
+}
+
+.skill-item i {
+    color: var(--primary-gold);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.skill-item h6 {
+    color: var(--dark-charcoal);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.skill-item p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Skill Level Bars */
+.skill-level {
+    margin-top: 0.5rem;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(184, 157, 79, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.25rem;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-gold), var(--secondary-gold));
+    border-radius: 4px;
+    transition: width 1s ease;
+    position: relative;
+}
+
+.skill-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.skill-percentage {
+    color: var(--primary-gold);
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+/* Dark mode support */
+body.dark-mode .timeline-title {
+    color: var(--white);
+}
+
+body.dark-mode .timeline-item {
+    background: rgba(184, 157, 79, 0.1);
+}
+
+body.dark-mode .timeline-item-title {
+    color: var(--white);
+}
+
+body.dark-mode .timeline-item-description {
+    color: #ccc;
+}
+
+body.dark-mode .skill-item {
+    background: #333;
+    border-color: rgba(184, 157, 79, 0.3);
+}
+
+body.dark-mode .skill-item h6 {
+    color: var(--white);
+}
+
+body.dark-mode .skill-item p {
+    color: #ccc;
+}
+
+/* Responsive Design for Leadership */
+@media (max-width: 768px) {
+    .leadership-grid {
+        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    
+    .ceo-card-advanced {
+        width: 180px;
+        height: 180px;
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+    
+    .ceo-card-advanced .ceo-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .team-member-card {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .team-member-card .member-image {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .leadership-modal-content {
+        width: 95%;
+        max-height: 90vh;
+    }
+    
+    .leader-profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .timeline-container {
+        padding-left: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .ceo-card-advanced {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .ceo-card-advanced .ceo-image {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .team-member-card {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .team-member-card .member-image {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Fix for Brand Animation */
+.brand-text .en-text,
+.brand-text .ar-text {
+    color: #fff !important;
+    background: none !important;
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 1.12em;
+    letter-spacing: 0.05em;
+    text-shadow: none !important;
+}
+
+.animated-letter {
+    opacity: 0;
+    display: inline-block;
+    background: none !important;
+    box-shadow: none !important;
+    filter: blur(2px);
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 1.3em;
+    letter-spacing: 0.05em;
+    transition: opacity 0.4s, transform 0.4s, filter 0.4s;
+}
+
+.animated-letter.visible {
+    opacity: 1;
+    filter: blur(0);
+    text-shadow: 0 2px 8px rgba(184,157,79,0.15), 0 1px 0 #fff;
+}
+
+.animated-letter.en {
+    transform: scale(0.7) translateY(20px);
+}
+
+.animated-letter.en.visible {
+    transform: scale(1.1) translateY(0);
+}
+
+.animated-letter.ar {
+    transform: scale(0.7) translateX(40px);
+}
+
+.animated-letter.ar.visible {
+    transform: scale(1.1) translateX(0);
+}
+
+.arabic-brand-animate {
+    opacity: 0;
+    display: inline-block;
+    color: var(--primary-gold);
+    font-weight: bold;
+    font-size: 1.12em;
+    letter-spacing: 0.07em;
+    transform: scale(0.8) translateY(22px);
+    filter: blur(2px);
+    transition: opacity 0.7s cubic-bezier(0.68,-0.55,0.27,1.55),
+                transform 0.7s cubic-bezier(0.68,-0.55,0.27,1.55),
+                filter 0.7s;
+    text-shadow: 0 4px 16px rgba(184,157,79,0.18), 0 2px 0 #fff;
+}
+
+.arabic-brand-animate.visible {
+    opacity: 1;
+    transform: scale(1.15) translateY(0);
+    filter: blur(0);
+}
+
+/* Logo rotation animation */
+.logo-rotate {
+    animation: logo-spin 0.7s cubic-bezier(0.68,-0.55,0.27,1.55);
+}
+
+@keyframes logo-spin {
+    0% { transform: rotate(0deg); }
+    60% { transform: rotate(360deg) scale(1.2); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+/* Animated Loading Spinner Border on Hover */
 .logo-animated-container {
     position: relative;
     display: inline-block;
     width: 50px;
     height: 50px;
 }
+
 .logo-animated-container .img-fluid {
     width: 100%;
     height: 100%;
@@ -1793,6 +2624,7 @@ body.dark-mode .category-title {
     z-index: 2;
     position: relative;
 }
+
 .logo-animated-container::before {
     content: '';
     position: absolute;
@@ -1812,6 +2644,7 @@ body.dark-mode .category-title {
     transform: scale(1.3) rotate(0deg);
     transition: opacity 0.3s;
 }
+
 .logo-animated-container:hover::before,
 .logo-animated-container:focus-within::before {
     opacity: 1;
