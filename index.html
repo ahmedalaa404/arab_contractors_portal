@@ -22,9 +22,6 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -83,22 +80,38 @@
         </div>
     </nav>
 
-    <!-- Swiper Slider (Simple, Reliable) -->
-    <div class="container my-5 h-100 ">
-        <div class="swiper basic-swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="https://picsum.photos/900/350?random=1" alt="Slide 1"
-                        class="img-fluid rounded shadow"></div>
-                <div class="swiper-slide"><img src="https://picsum.photos/900/350?random=2" alt="Slide 2"
-                        class="img-fluid rounded shadow"></div>
-                <div class="swiper-slide"><img src="https://picsum.photos/900/350?random=3" alt="Slide 3"
-                        class="img-fluid rounded shadow"></div>
+    <!-- Bootstrap Carousel -->
+    <div class="container-fluid my-5">
+        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- Add Navigation -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            
+            <!-- Carousel Items -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://picsum.photos/900/350?random=1" class="d-block w-100 rounded shadow h-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/900/350?random=2" class="d-block w-100 rounded shadow h-100" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/900/350?random=3" class="d-block w-100 rounded shadow h-100" alt="Slide 3">
+                </div>
+            </div>
+            
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
 
@@ -887,32 +900,6 @@
 
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var dir = document.documentElement.getAttribute('dir') || 'ltr';
-            console.log(dir)
-            new Swiper('.basic-swiper', {
-                loop: true,
-                speed: 600,
-                slidesPerView: 1,
-                direction: dir,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                autoplay: {
-                    delay: 4000,
-                    disableOnInteraction: false,
-                },
-            });
-        });
-    </script>
 
     <!-- Custom JS -->
     <script src="script.js"></script>

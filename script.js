@@ -20,6 +20,9 @@ $(document).ready(function() {
             navbar.removeClass('scrolled');
         }
     });
+    
+    // Initialize navbar state on page load
+    $(window).trigger('scroll');
 
     // ===== Fast Smooth Scrolling for Navigation Links =====
     $('a[href^="#"]').on('click', function(e) {
@@ -136,11 +139,12 @@ $(document).ready(function() {
         $('#themeToggle i').removeClass('fa-moon').addClass('fa-sun');
     }
 
-    // ===== Carousel Auto-play with Pause on Hover =====
-    const carousel = $('#heroCarousel');
-    carousel.carousel({
+    // ===== Bootstrap Carousel Initialization =====
+    const mainCarousel = new bootstrap.Carousel(document.getElementById('mainCarousel'), {
         interval: 5000,
-        pause: 'hover'
+        pause: 'hover',
+        wrap: true,
+        keyboard: true
     });
 
     // ===== Enhanced Leadership Cards Hover Effects =====
