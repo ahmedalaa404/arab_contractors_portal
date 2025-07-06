@@ -153,14 +153,6 @@ $(document).ready(function() {
         $('#themeToggle i').removeClass('fa-moon').addClass('fa-sun');
     }
 
-    // ===== Bootstrap Carousel Initialization =====
-    const mainCarousel = new bootstrap.Carousel(document.getElementById('mainCarousel'), {
-        interval: 5000,
-        pause: 'hover',
-        wrap: true,
-        keyboard: true
-    });
-
     // ===== Enhanced Leadership Cards Hover Effects =====
     $('.leadership-card').hover(
         function() {
@@ -1745,65 +1737,6 @@ $(document).ready(function() {
         // Initialize carousel functionality
         initializeCarousel();
     }
-
-    // Carousel functionality
-    let currentSlide = 0;
-    let totalSlides = 0;
-
-    function initializeCarousel() {
-        const slides = document.querySelectorAll('.carousel-slide');
-        totalSlides = slides.length;
-        currentSlide = 0;
-
-        // Set up navigation buttons
-        const prevBtn = document.querySelector('.carousel-prev');
-        const nextBtn = document.querySelector('.carousel-next');
-
-        prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
-        nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
-
-        // Auto-play carousel
-        startAutoPlay();
-    }
-
-    function goToSlide(slideIndex) {
-        if (slideIndex < 0) slideIndex = totalSlides - 1;
-        if (slideIndex >= totalSlides) slideIndex = 0;
-
-        currentSlide = slideIndex;
-        updateCarousel();
-    }
-
-    function updateCarousel() {
-        const container = document.querySelector('.carousel-container');
-        const indicators = document.querySelectorAll('.carousel-indicator');
-
-        // Update slide position
-        container.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-        // Update indicators
-        indicators.forEach((indicator, index) => {
-            indicator.classList.toggle('active', index === currentSlide);
-        });
-    }
-
-    function startAutoPlay() {
-        setInterval(() => {
-            goToSlide(currentSlide + 1);
-        }, 5000); // Change slide every 5 seconds
-    }
-
-    // Keyboard navigation for carousel
-    document.addEventListener('keydown', (e) => {
-        const modal = document.getElementById('projectDetailsModal');
-        if (modal.classList.contains('show')) {
-            if (e.key === 'ArrowLeft') {
-                goToSlide(currentSlide - 1);
-            } else if (e.key === 'ArrowRight') {
-                goToSlide(currentSlide + 1);
-            }
-        }
-    });
 
     // ===== Counter Animation for Stats =====
     function animateCounters() {
