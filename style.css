@@ -1802,6 +1802,328 @@ body.dark-mode .category-title {
     filter: blur(0);
 }
 
+/* ===== New Leadership Section Styles ===== */
+#leadership {
+    background: linear-gradient(135deg, var(--light-gray) 0%, #f0f0f0 100%);
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#leadership::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="leadership-pattern" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23B89D4F" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23leadership-pattern)"/></svg>');
+    opacity: 0.3;
+    animation: float 20s ease-in-out infinite;
+}
+
+.section-subtitle {
+    color: var(--dark-charcoal);
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.section-subtitle i {
+    color: var(--primary-gold);
+}
+
+/* ===== Chairman Card - Center Position ===== */
+.chairman-card {
+    position: relative;
+    background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+    border-radius: 25px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(184, 157, 79, 0.3);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: chairmanFloat 4s ease-in-out infinite;
+    cursor: pointer;
+}
+
+@keyframes chairmanFloat {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-10px) scale(1.02); }
+}
+
+.chairman-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 30px 70px rgba(184, 157, 79, 0.4);
+    animation: none;
+}
+
+.chairman-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--white);
+    color: var(--primary-gold);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.chairman-card:hover .chairman-badge {
+    transform: translateX(-50%) scale(1.1);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.chairman-image-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--white);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.chairman-card:hover .chairman-image-container {
+    transform: scale(1.1);
+    border-color: var(--primary-gold);
+}
+
+.chairman-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.chairman-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(184, 157, 79, 0.9), rgba(139, 117, 0, 0.9));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+}
+
+.chairman-card:hover .chairman-overlay {
+    opacity: 1;
+}
+
+.chairman-info {
+    text-align: center;
+    color: var(--white);
+}
+
+.chairman-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.chairman-position {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.chairman-social {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.chairman-social .btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.chairman-social .btn:hover {
+    transform: scale(1.2);
+    background: var(--primary-gold);
+    color: var(--white);
+}
+
+/* ===== Executive Members Cards ===== */
+.executive-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    border: 2px solid transparent;
+    position: relative;
+}
+
+.executive-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 25px 50px rgba(184, 157, 79, 0.2);
+    border-color: var(--primary-gold);
+}
+
+.executive-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.executive-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.executive-card:hover .executive-image img {
+    transform: scale(1.1);
+}
+
+.executive-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(184, 157, 79, 0.3);
+    transition: all 0.3s ease;
+}
+
+.executive-card:hover .executive-badge {
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 8px 20px rgba(184, 157, 79, 0.4);
+}
+
+.executive-content {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.executive-name {
+    color: var(--dark-charcoal);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.executive-card:hover .executive-name {
+    color: var(--primary-gold);
+}
+
+.executive-position {
+    color: var(--text-light);
+    font-weight: 500;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ===== Non-Executive Members Cards ===== */
+.non-executive-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    border: 2px solid transparent;
+    position: relative;
+}
+
+.non-executive-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(184, 157, 79, 0.15);
+    border-color: var(--primary-gold);
+}
+
+.non-executive-image {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.non-executive-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.non-executive-card:hover .non-executive-image img {
+    transform: scale(1.1);
+}
+
+.non-executive-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(184, 157, 79, 0.3);
+    transition: all 0.3s ease;
+}
+
+.non-executive-card:hover .non-executive-badge {
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 6px 15px rgba(184, 157, 79, 0.4);
+}
+
+.non-executive-content {
+    padding: 1rem;
+    text-align: center;
+}
+
+.non-executive-name {
+    color: var(--dark-charcoal);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.non-executive-card:hover .non-executive-name {
+    color: var(--primary-gold);
+}
+
+.non-executive-position {
+    color: var(--text-light);
+    font-weight: 500;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
 /* ===== Advanced Leadership Section ===== */
 .leadership-advanced {
     background: linear-gradient(135deg, var(--light-gray) 0%, #f0f0f0 100%);
@@ -2753,6 +3075,37 @@ body.dark-mode .skill-item p {
     
     #mainCarousel .carousel-item img {
         height: 250px;
+    }
+    
+    /* Leadership responsive styles */
+    .chairman-card {
+        padding: 1.5rem;
+    }
+    
+    .chairman-image-container {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .chairman-name {
+        font-size: 1.1rem;
+    }
+    
+    .executive-card,
+    .non-executive-card {
+        margin-bottom: 1rem;
+    }
+    
+    .executive-image {
+        height: 200px;
+    }
+    
+    .non-executive-image {
+        height: 150px;
+    }
+    
+    .section-subtitle {
+        font-size: 1.3rem;
     }
 }
 

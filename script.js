@@ -110,8 +110,22 @@ $(document).ready(function() {
             btn.find('.ar-text').text('AR');
         }
         
+        // Show/hide language-specific content
+        if (isRTL) {
+            $('.en-text').hide();
+            $('.ar-text').show();
+        } else {
+            $('.en-text').show();
+            $('.ar-text').hide();
+        }
+        
         // Store preference
         localStorage.setItem('preferred-language', lang);
+        
+        // Trigger brand animation after language change
+        setTimeout(function() {
+            animateBrandName();
+        }, 100);
     }
 
     // ===== Dark Mode Toggle =====
@@ -159,13 +173,35 @@ $(document).ready(function() {
         }
     );
 
-    // ===== Leadership Card Click Handler =====
+    // ===== Leadership Card Click Handlers =====
     $('.leadership-card').on('click', function() {
         const leaderName = $(this).find('h4, h5').first().text().trim();
         const leaderData = getLeaderDetails(leaderName);
         
         if (leaderData) {
             showLeaderDetails(leaderData);
+        }
+    });
+    
+    // New leadership cards click handlers
+    $('.chairman-card').on('click', function() {
+        const leaderData = getLeaderDetails('Eng. Ahmed Hassan');
+        if (leaderData) {
+            showLeaderDetails(leaderData);
+        }
+    });
+    
+    $('.executive-card').on('click', function() {
+        const leaderId = $(this).data('leader');
+        if (leadershipData[leaderId]) {
+            openLeadershipModal(leaderId);
+        }
+    });
+    
+    $('.non-executive-card').on('click', function() {
+        const leaderId = $(this).data('leader');
+        if (leadershipData[leaderId]) {
+            openLeadershipModal(leaderId);
         }
     });
 
@@ -1890,12 +1926,6 @@ $(document).ready(function() {
         });
     }
 
-    // ===== Load Saved Language Preference =====
-    const savedLang = localStorage.getItem('preferred-language');
-    if (savedLang && savedLang !== 'en') {
-        toggleLanguage(savedLang);
-    }
-
     // ===== Performance Optimization =====
     // Debounce scroll events
     let scrollTimer;
@@ -1910,9 +1940,9 @@ $(document).ready(function() {
     // Add keyboard navigation for carousel
     $(document).keydown(function(e) {
         if (e.keyCode === 37) { // Left arrow
-            carousel.carousel('prev');
+            mainCarousel.carousel('prev');
         } else if (e.keyCode === 39) { // Right arrow
-            carousel.carousel('next');
+            mainCarousel.carousel('next');
         }
     });
 
@@ -2090,7 +2120,10 @@ $(document).ready(function() {
         var name = isArabic ? "المقاولون العرب" : "Arab Contractors";
         var container = isArabic ? $("#animated-arabic-name") : $(".brand-text .en-text");
         var logo = $(".logo-container img");
+        
+        // Clear previous content
         container.empty();
+        
         if (isArabic) {
             // Arabic: animate whole text with a beautiful effect
             var span = $("<span>")
@@ -2122,12 +2155,174 @@ $(document).ready(function() {
             });
         }
     }
-    // Run on load
+    
+    // Initialize brand animation on page load
     animateBrandName();
-    // Re-run when language toggled
-    $("#langToggle").on("click", function() {
-        setTimeout(function() {
-            animateBrandName();
-        }, 350);
-    });
+    
+    // Apply saved language preference on page load
+    const savedLang = localStorage.getItem('preferred-language');
+    if (savedLang && savedLang !== 'en') {
+        toggleLanguage(savedLang);
+    }
+    
+    // ===== Leadership Modal Functions =====
+    let currentLeaderId = null;
+    
+    // Leadership data for modal
+    const leadershipData = {
+        ceo: {
+            name: {
+                en: 'Eng. Ahmed Hassan',
+                ar: 'م. أحمد حسن'
+            },
+            position: {
+                en: 'Chief Executive Officer',
+                ar: 'الرئيس التنفيذي'
+            },
+            image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+            email: 'ahmed.hassan@arabcontractors.com',
+            phone: '+20 2 1234 5678',
+            location: {
+                en: 'Cairo, Egypt',
+                ar: 'القاهرة، مصر'
+            }
+        },
+        cfo: {
+            name: {
+                en: 'Dr. Sarah Al-Mansouri',
+                ar: 'د. سارة المنصوري'
+            },
+            position: {
+                en: 'Chief Financial Officer',
+                ar: 'الرئيس المالي'
+            },
+            image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+            email: 'sarah.mansouri@arabcontractors.com',
+            phone: '+20 2 1234 5679',
+            location: {
+                en: 'Cairo, Egypt',
+                ar: 'القاهرة، مصر'
+            }
+        },
+        coo: {
+            name: {
+                en: 'Eng. Omar Khalil',
+                ar: 'م. عمر خليل'
+            },
+            position: {
+                en: 'Chief Operations Officer',
+                ar: 'الرئيس التنفيذي للعمليات'
+            },
+            image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+            email: 'omar.khalil@arabcontractors.com',
+            phone: '+20 2 1234 5680',
+            location: {
+                en: 'Cairo, Egypt',
+                ar: 'القاهرة، مصر'
+            }
+        },
+        cto: {
+            name: {
+                en: 'Eng. Fatima Zahra',
+                ar: 'م. فاطمة الزهراء'
+            },
+            position: {
+                en: 'Chief Technology Officer',
+                ar: 'الرئيس التنفيذي للتكنولوجيا'
+            },
+            image: 'https://images.unsplash.com/photo-1438761681033-6461a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+            email: 'fatima.zahra@arabcontractors.com',
+            phone: '+20 2 1234 5681',
+            location: {
+                en: 'Cairo, Egypt',
+                ar: 'القاهرة، مصر'
+            }
+        },
+        director: {
+            name: {
+                en: 'Eng. Khalid Al-Rashid',
+                ar: 'م. خالد الرشيد'
+            },
+            position: {
+                en: 'Project Director',
+                ar: 'مدير المشروع'
+            },
+            image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+            email: 'khalid.rashid@arabcontractors.com',
+            phone: '+20 2 1234 5682',
+            location: {
+                en: 'Cairo, Egypt',
+                ar: 'القاهرة، مصر'
+            }
+        },
+        hr: {
+            name: {
+                en: 'Dr. Layla Al-Zahra',
+                ar: 'د. ليلى الزهراء'
+            },
+            position: {
+                en: 'Human Resources Director',
+                ar: 'مديرة الموارد البشرية'
+            },
+            image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+            email: 'layla.zahra@arabcontractors.com',
+            phone: '+20 2 1234 5683',
+            location: {
+                en: 'Cairo, Egypt',
+                ar: 'القاهرة، مصر'
+            }
+        }
+    };
+    
+    // Enhanced open leadership modal
+    function openLeadershipModal(leaderId) {
+        const leader = leadershipData[leaderId];
+        if (!leader) return;
+
+        // Store current leader ID
+        currentLeaderId = leaderId;
+
+        // Update modal content
+        updateModalContent(leader);
+        
+        // Show modal
+        $('#leadershipDetailsModal').modal('show');
+    }
+
+    // Function to update modal content
+    function updateModalContent(leader) {
+        const currentLang = $('html').attr('lang') || 'en';
+        const isRTL = currentLang === 'ar';
+
+        // Update modal content
+        $('.leader-profile-image').attr('src', leader.image);
+        $('.leader-name').html(`
+            <span class="en-text">${leader.name.en}</span>
+            <span class="ar-text">${leader.name.ar}</span>
+        `);
+        $('.leader-position').html(`
+            <span class="en-text">${leader.position.en}</span>
+            <span class="ar-text">${leader.position.ar}</span>
+        `);
+        $('.leader-email').text(leader.email);
+        $('.leader-phone').text(leader.phone);
+        $('.leader-location').html(`
+            <span class="en-text">${leader.location.en}</span>
+            <span class="ar-text">${leader.location.ar}</span>
+        `);
+
+        // Update language visibility
+        updateModalLanguage(isRTL);
+    }
+
+    // Function to update modal language visibility
+    function updateModalLanguage(isRTL) {
+        if (isRTL) {
+            $('.en-text').hide();
+            $('.ar-text').show();
+        } else {
+            $('.en-text').show();
+            $('.ar-text').hide();
+        }
+    }
 }); 
