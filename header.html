@@ -1,0 +1,51 @@
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <nav class="container mx-auto flex items-center justify-between py-3 px-4">
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center gap-2">
+      <img src="logo.png" alt="Logo" class="h-10 w-10 object-contain" />
+      <span class="font-bold text-lg text-yellow-700 hidden sm:inline">المقاولون العرب</span>
+    </a>
+    <!-- Desktop Nav -->
+    <ul class="hidden md:flex items-center gap-6 font-medium text-gray-700">
+      <li><a href="index.html" class="nav-link px-2 py-1 hover:text-yellow-700 border-b-2 border-transparent hover:border-yellow-500 transition active">الصفحة الرئيسية</a></li>
+      <li><a href="contact.html" class="nav-link px-2 py-1 hover:text-yellow-700 border-b-2 border-transparent hover:border-yellow-500 transition">تواصل معنا</a></li>
+      <li><a href="offices.html" class="nav-link px-2 py-1 hover:text-yellow-700 border-b-2 border-transparent hover:border-yellow-500 transition">المكاتب</a></li>
+      <li><a href="leadership.html" class="nav-link px-2 py-1 hover:text-yellow-700 border-b-2 border-transparent hover:border-yellow-500 transition">القيادة</a></li>
+    </ul>
+    <!-- CTA Button -->
+    <a href="#" class="hidden md:inline-block bg-yellow-600 text-white font-semibold rounded-lg px-5 py-2 ml-4 hover:bg-yellow-700 transition">تسجيل الدخول</a>
+    <!-- Hamburger -->
+    <button id="mobile-menu-btn" class="md:hidden flex items-center text-2xl text-yellow-700 focus:outline-none">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-200 shadow-lg absolute w-full left-0 top-16 hidden">
+    <ul class="flex flex-col gap-2 p-4 font-medium text-gray-700">
+      <li><a href="index.html" class="nav-link block px-2 py-2 rounded hover:bg-yellow-50 active">الصفحة الرئيسية</a></li>
+      <li><a href="contact.html" class="nav-link block px-2 py-2 rounded hover:bg-yellow-50">تواصل معنا</a></li>
+      <li><a href="offices.html" class="nav-link block px-2 py-2 rounded hover:bg-yellow-50">المكاتب</a></li>
+      <li><a href="leadership.html" class="nav-link block px-2 py-2 rounded hover:bg-yellow-50">القيادة</a></li>
+      <li><a href="#" class="block bg-yellow-600 text-white font-semibold rounded-lg px-5 py-2 mt-2 text-center hover:bg-yellow-700 transition">تسجيل الدخول</a></li>
+    </ul>
+  </div>
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn && btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+    // Highlight current page (add 'active' class)
+    const links = document.querySelectorAll('.nav-link');
+    links.forEach(link => {
+      if (window.location.pathname.endsWith(link.getAttribute('href'))) {
+        link.classList.add('font-bold', 'text-yellow-700', 'border-yellow-500');
+        link.classList.remove('border-transparent');
+      } else {
+        link.classList.remove('font-bold', 'text-yellow-700', 'border-yellow-500');
+        link.classList.add('border-transparent');
+      }
+    });
+  </script>
+</header> 
