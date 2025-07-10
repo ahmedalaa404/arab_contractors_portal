@@ -2270,4 +2270,35 @@ $(document).ready(function() {
             $('.ar-text').hide();
         }
     }
+
+    // ===== Theme (Light/Dark Mode) System =====
+    function applyTheme(theme) {
+        if (theme === 'dark') {
+            $('body').removeClass('light-mode').addClass('dark-mode');
+            $('#themeToggle i').removeClass('fa-moon').addClass('fa-sun');
+        } else {
+            $('body').removeClass('dark-mode').addClass('light-mode');
+            $('#themeToggle i').removeClass('fa-sun').addClass('fa-moon');
+        }
+    }
+
+    function getSavedTheme() {
+        return localStorage.getItem('theme') || 'light';
+    }
+
+    function setTheme(theme) {
+        localStorage.setItem('theme', theme);
+        applyTheme(theme);
+    }
+
+    // On page load, apply saved theme (default to light)
+    const initialTheme = getSavedTheme();
+    applyTheme(initialTheme);
+
+    // Toggle theme on button click
+    $('#themeToggle').on('click', function() {
+        const currentTheme = $('body').hasClass('dark-mode') ? 'dark' : 'light';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+    });
 }); 
