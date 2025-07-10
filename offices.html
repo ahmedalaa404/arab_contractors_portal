@@ -14,85 +14,15 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* New Office Style */
-        .office-list-section {
-            background: linear-gradient(120deg, #f8f9fa 60%, #e9ecef 100%);
-            padding: 60px 0 80px 0;
-        }
-        .office-list-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-            align-items: stretch;
-        }
-        .office-list-item {
-            background: #fff;
-            border-radius: 2rem;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-            padding: 2.5rem 2rem 2rem 2rem;
-            position: relative;
-            transition: box-shadow 0.3s, transform 0.3s;
-            overflow: hidden;
-        }
-        .office-list-item:hover {
-            box-shadow: 0 16px 48px rgba(184,157,79,0.18);
-            transform: translateY(-8px) scale(1.03);
-        }
-        .office-list-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #b89d4f, #e6c97a);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 16px rgba(184,157,79,0.12);
-        }
-        .office-list-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #222;
-            margin-bottom: 0.5rem;
-        }
-        .office-list-location {
-            color: #b89d4f;
-            font-weight: 600;
-            margin-bottom: 1.2rem;
-        }
-        .office-list-details {
-            font-size: 1.05rem;
-            color: #444;
-            margin-bottom: 0.5rem;
-        }
-        .office-list-contact {
-            margin-top: 1.2rem;
-        }
-        .office-list-contact a {
-            color: #b89d4f;
-            text-decoration: none;
-            font-weight: 600;
-            margin-right: 1.2rem;
-            transition: color 0.2s;
-        }
-        .office-list-contact a:hover {
-            color: #222;
-        }
-        @media (max-width: 600px) {
-            .office-list-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+
 </head>
 <body>
     <!-- Header/Navbar (copied from index.html) -->
+    <!-- Header/Navbar -->
     <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html#home">
+            <!-- Logo and Brand -->
+            <a class="navbar-brand d-flex align-items-center" href="#home">
                 <div class="logo-container me-3 bg-white">
                     <div class="logo-animated-container">
                         <img src="logo.png" alt="logo" class="img-fluid">
@@ -103,22 +33,26 @@
                     <div class="ar-text"><span id="animated-arabic-name"></span></div>
                 </div>
             </a>
+
+            <!-- Mobile Toggle -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Navigation Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#home" data-i18n="nav.home">Home</a>
+                        <a class="nav-link active" href="#home" data-i18n="nav.home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#about" data-i18n="nav.about">About</a>
+                        <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="leadership.html" data-i18n="nav.leadership">Leadership</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#sustainability" data-i18n="nav.sustainability">Sustainability</a>
+                        <a class="nav-link" href="#sustainability" data-i18n="nav.sustainability">Sustainability</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.contact">
@@ -133,7 +67,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item active" href="offices.html">
+                                <a class="dropdown-item" href="#offices">
                                     <span class="en-text">Offices</span>
                                     <span class="ar-text">المكاتب</span>
                                 </a>
@@ -141,6 +75,8 @@
                         </ul>
                     </li>
                 </ul>
+
+                <!-- Language and Theme Toggles -->
                 <div class="navbar-controls d-flex align-items-center ms-3 text-white" >
                     <button id="langToggle" class="btn btn-outline-light btn-sm me-2" title="Toggle Language">
                         <span class="en-text">AR</span>
@@ -154,54 +90,16 @@
         </div>
     </nav>
 
-    <!-- Offices Grouped Section (Arabic, Tailwind CSS) -->
-    <section class="py-12 bg-gray-50" id="grouped-offices">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-10 text-yellow-700">المكاتب</h2>
-        <!-- Main Office -->
-        <div class="mb-12">
-          <div class="flex flex-col items-center">
-            <div class="office-list-item aos-init aos-animate bg-white rounded-2xl shadow-lg p-8 w-full max-w-xl flex flex-col items-center text-center hover:shadow-2xl transition">
-              <div class="mb-4 text-4xl text-yellow-600"><i class="fas fa-star"></i></div>
-              <h3 class="text-2xl font-bold mb-2 text-yellow-800">المكتب الرئيسي</h3>
-              <p class="text-gray-700">المكتب الرئيسي للمقاولون العرب في القاهرة، يدير جميع العمليات والإدارات العليا.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Executive Offices -->
-        <div class="mb-10">
-          <h4 class="text-xl font-semibold mb-6 text-yellow-700 text-right pr-2">مكاتب تنفيذية</h4>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="office-list-item aos-init aos-animate bg-white rounded-xl shadow p-6 flex flex-col hover:shadow-lg transition">
-              <div class="mb-3 text-3xl text-blue-600"><i class="fas fa-briefcase"></i></div>
-              <h5 class="text-lg font-bold mb-1 text-blue-800">مكتب المدير التنفيذي</h5>
-              <p class="text-gray-600">يشرف على تنفيذ السياسات العامة وإدارة المشاريع الكبرى.</p>
-            </div>
-            <div class="office-list-item aos-init aos-animate bg-white rounded-xl shadow p-6 flex flex-col hover:shadow-lg transition">
-              <div class="mb-3 text-3xl text-blue-600"><i class="fas fa-user-tie"></i></div>
-              <h5 class="text-lg font-bold mb-1 text-blue-800">مكتب المدير المالي التنفيذي</h5>
-              <p class="text-gray-600">مسؤول عن التخطيط المالي وإدارة الميزانيات.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Non-Executive Offices -->
-        <div>
-          <h4 class="text-xl font-semibold mb-6 text-yellow-700 text-right pr-2">مكاتب غير تنفيذية</h4>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="office-list-item aos-init aos-animate bg-white rounded-xl shadow p-6 flex flex-col hover:shadow-lg transition">
-              <div class="mb-3 text-3xl text-green-600"><i class="fas fa-users"></i></div>
-              <h5 class="text-lg font-bold mb-1 text-green-800">مكتب الموارد البشرية</h5>
-              <p class="text-gray-600">يهتم بتطوير الموظفين وإدارة شؤونهم.</p>
-            </div>
-            <div class="office-list-item aos-init aos-animate bg-white rounded-xl shadow p-6 flex flex-col hover:shadow-lg transition">
-              <div class="mb-3 text-3xl text-green-600"><i class="fas fa-balance-scale"></i></div>
-              <h5 class="text-lg font-bold mb-1 text-green-800">مكتب الشؤون القانونية</h5>
-              <p class="text-gray-600">يتولى متابعة القضايا القانونية وحماية مصالح الشركة.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
+
+    
+
+
+
+
+
+
+
 
     <!-- Offices List Section (new style) -->
     <section class="office-list-section">
