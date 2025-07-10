@@ -9,17 +9,24 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style-offices.css">
+    <style>
+      body, html { font-family: 'Cairo', 'Roboto', sans-serif; }
+      .header-solid { background: #111 !important; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+      .header-solid .navbar-nav .nav-link { color: #fff !important; }
+      .header-solid .navbar-brand, .header-solid .brand-text .en-text, .header-solid .brand-text .ar-text { color: #fff !important; }
+      .header-solid .navbar-controls .btn { border-color: #fff; color: #fff; }
+      .breadcrumb { background: transparent; }
+    </style>
 </head>
-<body>
-    <!-- Header/Navbar (copied from index.html) -->
+<body class="offices-page">
     <!-- Header/Navbar -->
-    <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top">
+    <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top header-solid">
         <div class="container">
             <!-- Logo and Brand -->
             <a class="navbar-brand d-flex align-items-center" href="#home">
@@ -43,7 +50,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#home" data-i18n="nav.home">Home</a>
+                        <a class="nav-link" href="index.html" data-i18n="nav.home">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
@@ -67,7 +74,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#offices">
+                                <a class="dropdown-item" href="offices.html">
                                     <span class="en-text">Offices</span>
                                     <span class="ar-text">المكاتب</span>
                                 </a>
@@ -92,94 +99,378 @@
 
 
 
-    
-
-
-
-
-
-
-
-
-    <!-- Offices List Section (new style) -->
-    <section class="office-list-section">
+    <!-- Breadcrumbs -->
+    <section class="bg-light py-3 mt-5">
         <div class="container">
-            <h2 class="section-title text-center mb-5" data-aos="fade-up">
-                <span class="en-text">Our Office Locations</span>
-                <span class="ar-text">مواقع مكاتبنا</span>
-            </h2>
-            <div class="office-list-grid">
-                <!-- Cairo Office -->
-                <div class="office-list-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="office-list-icon"><i class="fas fa-building"></i></div>
-                    <div class="office-list-title">
-                        <span class="en-text">Cairo Office</span>
-                        <span class="ar-text">مكتب القاهرة</span>
-                    </div>
-                    <div class="office-list-location">
-                        <span class="en-text">123 Construction Street, Cairo, Egypt</span>
-                        <span class="ar-text">123 شارع البناء، القاهرة، مصر</span>
-                    </div>
-                    <div class="office-list-details">
-                        <strong>Tel:</strong> +20 2 1234 5678
-                    </div>
-                    <div class="office-list-details">
-                        <strong>Email:</strong> cairo@arabcontractors.com
-                    </div>
-                    <div class="office-list-contact">
-                        <a href="mailto:cairo@arabcontractors.com"><i class="fas fa-envelope"></i> Email</a>
-                        <a href="tel:+20212345678"><i class="fas fa-phone"></i> Call</a>
-                    </div>
-                </div>
-                <!-- Alexandria Office -->
-                <div class="office-list-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="office-list-icon"><i class="fas fa-building"></i></div>
-                    <div class="office-list-title">
-                        <span class="en-text">Alexandria Office</span>
-                        <span class="ar-text">مكتب الإسكندرية</span>
-                    </div>
-                    <div class="office-list-location">
-                        <span class="en-text">456 Engineering Avenue, Alexandria, Egypt</span>
-                        <span class="ar-text">456 شارع الهندسة، الإسكندرية، مصر</span>
-                    </div>
-                    <div class="office-list-details">
-                        <strong>Tel:</strong> +20 3 1234 5678
-                    </div>
-                    <div class="office-list-details">
-                        <strong>Email:</strong> alexandria@arabcontractors.com
-                    </div>
-                    <div class="office-list-contact">
-                        <a href="mailto:alexandria@arabcontractors.com"><i class="fas fa-envelope"></i> Email</a>
-                        <a href="tel:+20312345678"><i class="fas fa-phone"></i> Call</a>
-                    </div>
-                </div>
-                <!-- Dubai Office -->
-                <div class="office-list-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="office-list-icon"><i class="fas fa-building"></i></div>
-                    <div class="office-list-title">
-                        <span class="en-text">Dubai Office</span>
-                        <span class="ar-text">مكتب دبي</span>
-                    </div>
-                    <div class="office-list-location">
-                        <span class="en-text">789 Business Bay, Dubai, UAE</span>
-                        <span class="ar-text">789 خليج الأعمال، دبي، الإمارات</span>
-                    </div>
-                    <div class="office-list-details">
-                        <strong>Tel:</strong> +971 4 1234 5678
-                    </div>
-                    <div class="office-list-details">
-                        <strong>Email:</strong> dubai@arabcontractors.com
-                    </div>
-                    <div class="office-list-contact">
-                        <a href="mailto:dubai@arabcontractors.com"><i class="fas fa-envelope"></i> Email</a>
-                        <a href="tel:+971412345678"><i class="fas fa-phone"></i> Call</a>
-                    </div>
-                </div>
-            </div>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item">
+                        <a href="index.html" class="text-decoration-none">
+                            <span class="en-text">Home</span>
+                            <span class="ar-text">الرئيسية</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <span class="en-text">Our Offices</span>
+                        <span class="ar-text">مكاتبنا</span>
+                    </li>
+                </ol>
+            </nav>
         </div>
     </section>
 
-    <!-- Footer (copied from index.html) -->
+    <!-- Main Content -->
+    <main class="py-5">
+        <div class="container">
+            <h1 class="section-title text-center mb-5">
+                <span class="en-text">Our Offices</span>
+                <span class="ar-text">مكاتبنا</span>
+            </h1>
+            <!-- Main Office -->
+            <section class="mb-5" data-aos="fade-up">
+                <h2 class="text-center mb-4">
+                    <span class="en-text">Main Office</span>
+                    <span class="ar-text">المكتب الرئيسي</span>
+                </h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="office-card main-office-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="office-header text-center mb-4">
+                                <div class="office-badge mb-3">
+                                    <i class="fas fa-crown text-white"></i>
+                                </div>
+                                <h3 class="office-name">
+                                    <span class="en-text">Arab Contractors Headquarters</span>
+                                    <span class="ar-text">المقر الرئيسي للمقاولون العرب</span>
+                                </h3>
+                                <p class="office-subtitle text-muted">
+                                    <span class="en-text">Cairo, Egypt</span>
+                                    <span class="ar-text">القاهرة، مصر</span>
+                                </p>
+                            </div>
+                            <div class="office-content">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="office-info-item">
+                                            <i class="fas fa-map-marker-alt text-primary"></i>
+                                            <div>
+                                                <h6>
+                                                    <span class="en-text">Address</span>
+                                                    <span class="ar-text">العنوان</span>
+                                                </h6>
+                                                <p>
+                                                    <span class="en-text">15 El-Nasr Street, Nasr City, Cairo, Egypt</span>
+                                                    <span class="ar-text">15 شارع النصر، مدينة نصر، القاهرة، مصر</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="office-info-item">
+                                            <i class="fas fa-phone text-primary"></i>
+                                            <div>
+                                                <h6>
+                                                    <span class="en-text">Phone</span>
+                                                    <span class="ar-text">الهاتف</span>
+                                                </h6>
+                                                <p>+20 2 1234 5678</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="office-info-item">
+                                            <i class="fas fa-envelope text-primary"></i>
+                                            <div>
+                                                <h6>
+                                                    <span class="en-text">Email</span>
+                                                    <span class="ar-text">البريد الإلكتروني</span>
+                                                </h6>
+                                                <p>info@arabcontractors.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="office-info-item">
+                                            <i class="fas fa-clock text-primary"></i>
+                                            <div>
+                                                <h6>
+                                                    <span class="en-text">Working Hours</span>
+                                                    <span class="ar-text">ساعات العمل</span>
+                                                </h6>
+                                                <p>
+                                                    <span class="en-text">Sunday - Thursday: 8:00 AM - 5:00 PM</span>
+                                                    <span class="ar-text">الأحد - الخميس: 8:00 صباحاً - 5:00 مساءً</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Executive Offices -->
+            <section class="mb-5" data-aos="fade-up">
+                <h2 class="text-center mb-4">
+                    <span class="en-text">Executive Offices</span>
+                    <span class="ar-text">مكاتب تنفيذية</span>
+                </h2>
+                <div class="row g-4">
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="office-card executive-office-card">
+                            <div class="office-header">
+                                <div class="office-badge">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div>
+                                    <h4 class="office-name">
+                                        <span class="en-text">Alexandria Executive Office</span>
+                                        <span class="ar-text">المكتب التنفيذي بالإسكندرية</span>
+                                    </h4>
+                                    <p class="office-subtitle">
+                                        <span class="en-text">Alexandria, Egypt</span>
+                                        <span class="ar-text">الإسكندرية، مصر</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="office-content">
+                                <div class="office-info-item">
+                                    <i class="fas fa-map-marker-alt text-primary"></i>
+                                    <div>
+                                        <h6>
+                                            <span class="en-text">Address</span>
+                                            <span class="ar-text">العنوان</span>
+                                        </h6>
+                                        <p>
+                                            <span class="en-text">25 El-Gaish Road, Sidi Gaber, Alexandria</span>
+                                            <span class="ar-text">25 طريق الجيش، سيدي جابر، الإسكندرية</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="office-info-item">
+                                    <i class="fas fa-phone text-primary"></i>
+                                    <div>
+                                        <h6>
+                                            <span class="en-text">Phone</span>
+                                            <span class="ar-text">الهاتف</span>
+                                        </h6>
+                                        <p>+20 3 4567 8901</p>
+                                    </div>
+                                </div>
+                                <div class="office-info-item">
+                                    <i class="fas fa-envelope text-primary"></i>
+                                    <div>
+                                        <h6>
+                                            <span class="en-text">Email</span>
+                                            <span class="ar-text">البريد الإلكتروني</span>
+                                        </h6>
+                                        <p>alexandria@arabcontractors.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="office-card executive-office-card">
+                            <div class="office-header">
+                                <div class="office-badge">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div>
+                                    <h4 class="office-name">
+                                        <span class="en-text">Dubai Executive Office</span>
+                                        <span class="ar-text">المكتب التنفيذي بدبي</span>
+                                    </h4>
+                                    <p class="office-subtitle">
+                                        <span class="en-text">Dubai, UAE</span>
+                                        <span class="ar-text">دبي، الإمارات العربية المتحدة</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="office-content">
+                                <div class="office-info-item">
+                                    <i class="fas fa-map-marker-alt text-primary"></i>
+                                    <div>
+                                        <h6>
+                                            <span class="en-text">Address</span>
+                                            <span class="ar-text">العنوان</span>
+                                        </h6>
+                                        <p>
+                                            <span class="en-text">Sheikh Zayed Road, Dubai Marina, Dubai</span>
+                                            <span class="ar-text">طريق الشيخ زايد، مارينا دبي، دبي</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="office-info-item">
+                                    <i class="fas fa-phone text-primary"></i>
+                                    <div>
+                                        <h6>
+                                            <span class="en-text">Phone</span>
+                                            <span class="ar-text">الهاتف</span>
+                                        </h6>
+                                        <p>+971 4 5678 9012</p>
+                                    </div>
+                                </div>
+                                <div class="office-info-item">
+                                    <i class="fas fa-envelope text-primary"></i>
+                                    <div>
+                                        <h6>
+                                            <span class="en-text">Email</span>
+                                            <span class="ar-text">البريد الإلكتروني</span>
+                                        </h6>
+                                        <p>dubai@arabcontractors.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Non-Executive Offices -->
+            <section class="mb-5" data-aos="fade-up">
+                <h2 class="text-center mb-4">
+                    <span class="en-text">Non-Executive Offices</span>
+                    <span class="ar-text">مكاتب غير تنفيذية</span>
+                </h2>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="office-card non-executive-office-card">
+                            <div class="office-header">
+                                <div class="office-badge">
+                                    <i class="fas fa-map-pin"></i>
+                                </div>
+                                <div>
+                                    <h5 class="office-name">
+                                        <span class="en-text">Aswan Branch</span>
+                                        <span class="ar-text">فرع أسوان</span>
+                                    </h5>
+                                    <p class="office-subtitle">
+                                        <span class="en-text">Aswan, Egypt</span>
+                                        <span class="ar-text">أسوان، مصر</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="office-content">
+                                <div class="office-info-item">
+                                    <i class="fas fa-map-marker-alt text-primary"></i>
+                                    <div>
+                                        <h6>
+                                            <span class="en-text">Address</span>
+                                            <span class="ar-text">العنوان</span>
+                                        </h6>
+                                        <p>
+                                            <span class="en-text">Corniche El-Nil, Aswan</span>
+                                            <span class="ar-text">كورنيش النيل، أسوان</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="office-info-item">
+                                    <i class="fas fa-phone text-primary"></i>
+                                    <div>
+                                        <h6>
+                                            <span class="en-text">Phone</span>
+                                            <span class="ar-text">الهاتف</span>
+                                        </h6>
+                                        <p>+20 97 2345 6789</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="office-card non-executive-office-card">
+                            <div class="office-header">
+                                <div class="office-badge">
+                                    <i class="fas fa-map-pin"></i>
+                                </div>
+                                <div>
+                                    <h5 class="office-name">
+                                        <span class="en-text">Luxor Branch</span>
+                                        <span class="ar-text">فرع الأقصر</span>
+                                    </h5>
+                                    <p class="office-subtitle">
+                                        <span class="en-text">Luxor, Egypt</span>
+                                        <span class="ar-text">الأقصر، مصر</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="office-content">
+                                <div class="office-info-item">
+                                    <i class="fas fa-map-marker-alt text-primary"></i>
+                                    <div>
+                                        <h6>
+                                            <span class="en-text">Address</span>
+                                            <span class="ar-text">العنوان</span>
+                                        </h6>
+                                        <p>
+                                            <span class="en-text">Karnak Street, Luxor</span>
+                                            <span class="ar-text">شارع الكرنك، الأقصر</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="office-info-item">
+                                    <i class="fas fa-phone text-primary"></i>
+                                    <div>
+                                        <h6>
+                                            <span class="en-text">Phone</span>
+                                            <span class="ar-text">الهاتف</span>
+                                        </h6>
+                                        <p>+20 95 3456 7890</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                        <div class="office-card non-executive-office-card">
+                            <div class="office-header">
+                                <div class="office-badge">
+                                    <i class="fas fa-map-pin"></i>
+                                </div>
+                                <div>
+                                    <h5 class="office-name">
+                                        <span class="en-text">Hurghada Branch</span>
+                                        <span class="ar-text">فرع الغردقة</span>
+                                    </h5>
+                                    <p class="office-subtitle">
+                                        <span class="en-text">Hurghada, Egypt</span>
+                                        <span class="ar-text">الغردقة، مصر</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="office-content">
+                                <div class="office-info-item">
+                                    <i class="fas fa-map-marker-alt text-primary"></i>
+                                    <div>
+                                        <h6>
+                                            <span class="en-text">Address</span>
+                                            <span class="ar-text">العنوان</span>
+                                        </h6>
+                                        <p>
+                                            <span class="en-text">Sheraton Road, Hurghada</span>
+                                            <span class="ar-text">طريق الشيراتون، الغردقة</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="office-info-item">
+                                    <i class="fas fa-phone text-primary"></i>
+                                    <div>
+                                        <h6>
+                                            <span class="en-text">Phone</span>
+                                            <span class="ar-text">الهاتف</span>
+                                        </h6>
+                                        <p>+20 65 4567 8901</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Footer (reused) -->
     <footer class="footer bg-dark text-light py-5">
         <div class="container">
             <div class="row g-4">
