@@ -135,17 +135,17 @@ body.dark-mode .social-links .btn:hover {
 }
 
 body.light-mode .navbar, body.light-mode .footer {
-    background: var(--ransparent-white) !important;
+    background: var(--transparent-white) !important;
     color: var(--dark-charcoal);
 }
 
 body.light-mode .navbar-nav .nav-link {
-    color: var(--dark-charcoal) !important;
+    color: var(--white) !important;
 }
 
 body.light-mode .navbar-controls .btn {
-    border-color: var(--dark-charcoal);
-    color: var(--dark-charcoal);
+    border-color: var(--white);
+    color: var(--white);
 }
 
 body.light-mode .navbar-controls .btn:hover {
@@ -342,6 +342,11 @@ body.light-mode .social-links .btn:hover {
     padding: 5rem 0;
 }
 
+body.dark-mode #about {
+    background: var(--dark-charcoal);
+    color: var(--white);
+}
+
 .stat-item {
     padding: 1rem;
 }
@@ -351,6 +356,10 @@ body.light-mode .social-links .btn:hover {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+}
+
+body.dark-mode .stat-item p {
+    color: var(--text-light) !important;
 }
 
 .stat-item p {
@@ -559,6 +568,11 @@ body.light-mode .social-links .btn:hover {
 #sustainability {
     background: var(--white);
     padding: 5rem 0;
+}
+
+body.dark-mode #sustainability {
+    background: var(--dark-charcoal);
+    color: var(--white);
 }
 
 .sustainability-card {
@@ -3841,56 +3855,56 @@ body.dark-mode #offices::after {
 body.dark-mode .main-office-card,
 body.dark-mode .major-office-card,
 body.dark-mode .center-card {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    background: linear-gradient(135deg, var(--dark-charcoal) 0%, var(--light-gray) 100%);
     border-color: rgba(255, 255, 255, 0.2);
 }
 
 body.dark-mode .main-office-title,
 body.dark-mode .major-office-header h4,
 body.dark-mode .center-header h5 {
-    color: var(--white);
+    color: var(--white) !important;
 }
 
 body.dark-mode .office-info-item,
 body.dark-mode .office-detail,
 body.dark-mode .center-content p {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
+    background: rgba(var(--dark-charcoal), 0.1);
+    color: var(--white) !important;
 }
 
 body.dark-mode .office-info-item:hover,
 body.dark-mode .office-detail:hover,
 body.dark-mode .center-content p:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(var(--dark-charcoal), 0.15);
 }
 
 body.dark-mode .office-info-item h6 {
-    color: var(--white);
+    color: var(--white) !important;
 }
 
 body.dark-mode .office-info-item p {
-    color: var(--white);
+    color: var(--white) !important;
 }
 
 body.dark-mode .major-office-content {
-    color: var(--white);
+    color: var(--white) !important;
 }
 
 body.dark-mode .major-office-content span {
-    color: var(--white);
+    color: var(--white) !important;
 }
 
 body.dark-mode .map-placeholder {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    background: linear-gradient(135deg, var(--dark-charcoal), var(--light-gray));
     border-color: var(--primary-gold);
 }
 
 body.dark-mode .map-placeholder p {
-    color: var(--white);
+    color: var(--white) !important;
 }
 
 body.dark-mode .section-subtitle {
-    color: var(--white);
+    color: var(--white) !important;
 }
 
 /* Responsive Design */
@@ -4564,6 +4578,40 @@ body.dark-mode a {
 
 body.dark-mode a:hover {
     color: var(--primary-gold) !important;
+}
+
+.logo-animated-container {
+    position: relative;
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.loading-circle {
+    position: absolute;
+    border: 5px solid #f3f3f3; /* Light grey */
+    border-top: 5px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 0; /* Start hidden */
+    height: 0; /* Start hidden */
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    box-sizing: border-box;
+}
+
+.logo-animated-container:hover .loading-circle {
+    width: 80px; /* Adjust to desired circle size */
+    height: 80px; /* Adjust to desired circle size */
+    opacity: 1;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 

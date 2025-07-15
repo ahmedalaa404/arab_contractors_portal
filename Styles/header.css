@@ -5,51 +5,22 @@
 }
 
 #mainNavbar {
-    #mainNavbar {
-        background: transparent !important;
-        box-shadow: none;
-        transition: var(--transition);
-        padding: 1rem 0;
-        z-index: 1050;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-    }
-    
-    #mainNavbar.scrolled {
-        background: rgba(30, 30, 30, 0.95) !important;
-        backdrop-filter: blur(10px);
-        padding: 0.5rem 0;
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-    }
-    
-    /* Update text colors for better visibility */
-    .navbar-nav .nav-link {
-        color: var(--white) !important;
-        font-weight: 500;
-        margin: 0 0.5rem;
-        transition: var(--transition);
-        position: relative;
-        
-    }
-    
-    .brand-text .en-text,
-    .brand-text .ar-text {
-        color: var(--white) !important;
-    }
-    
-    .navbar-controls .btn {
-        border-color: var(--white);
-        color: var(--white);
-    }
-    transition: all 0.3s ease;
+    background: transparent;
+    box-shadow: none;
+    transition: background 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
     padding: 1rem 0;
+    z-index: 1050;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 #mainNavbar.scrolled {
-    background: var(--dark-charcoal);
-    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    background: var(--dark-charcoal) !important;
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
 #mainNavbar.scrolled .brand-text .en-text,
