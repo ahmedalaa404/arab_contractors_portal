@@ -1,0 +1,88 @@
+/* Dark Mode Styles */
+body.dark-mode {
+    --primary-gold: #FFD700;
+    --secondary-gold: #B89D4F;
+    --dark-charcoal: #181818;
+    --light-gray: #232323;
+    --white: #ffffff;
+    --black: #FFFFFF;
+    --text-dark: #F7F7F7;
+    --text-light: #CCCCCC;
+    background: var(--dark-charcoal);
+    color: var(--text-dark);
+}
+
+body.dark-mode .navbar, body.dark-mode .footer {
+    background: var(--dark-charcoal) !important;
+    color: var(--white);
+}
+
+body.dark-mode .section-title,
+body.dark-mode .brand-text .en-text,
+body.dark-mode .brand-text .ar-text {
+    color: var(--white) !important;
+}
+
+body.dark-mode .sustainability-card,
+body.dark-mode .leadership-card,
+body.dark-mode .project-card,
+body.dark-mode .modal-content,
+body.dark-mode .dropdown-menu,
+body.dark-mode .office-card {
+    background: var(--light-gray);
+    color: var(--text-dark);
+}
+
+body.dark-mode .navbar-nav .nav-link {
+    color: var(--white) !important;
+}
+
+body.dark-mode .navbar-controls .btn {
+    border-color: var(--white);
+    color: var(--white);
+}
+
+body.dark-mode .navbar-controls .btn:hover {
+    background: var(--primary-gold);
+    color: var(--white);
+}
+
+body.dark-mode .dropdown-item {
+    color: var(--white);
+}
+
+body.dark-mode .dropdown-item:hover {
+    background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+    color: white;
+}
+
+body.dark-mode .footer {
+    background: var(--dark-charcoal);
+    color: var(--white);
+}
+
+body.dark-mode .footer h6, body.dark-mode .footer-brand h5 {
+    color: var(--primary-gold);
+}
+
+body.dark-mode .footer ul li a {
+    color: var(--white);
+}
+
+body.dark-mode .footer ul li a:hover {
+    color: var(--primary-gold) !important;
+}
+
+body.dark-mode .contact-info p, body.dark-mode .contact-info i {
+    color: var(--text-light);
+}
+
+body.dark-mode .social-links .btn {
+    border-color: var(--primary-gold);
+    color: var(--primary-gold);
+}
+
+body.dark-mode .social-links .btn:hover {
+    background: var(--primary-gold);
+    color: var(--white);
+}
