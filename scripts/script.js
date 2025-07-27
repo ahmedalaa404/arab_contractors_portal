@@ -63,17 +63,19 @@ $(document).ready(function() {
             'nav.contact': 'Contact',
             'leadership_title': 'Board of Directors',
             'gm_position': 'Chief Executive Officer',
-            'leader_position': 'Project Director'
+            'leader_position': 'Project Director',
+            'nav.news': 'News'
         },
         ar: {
             'nav.home': 'الرئيسية',
             'nav.about': 'عن الشركة',
-            'nav.leadership': 'القيادة',
+            'nav.leadership': 'مجلس الاداروة',
             'nav.sustainability': 'الاستدامة',
             'nav.contact': 'اتصل بنا',
             'leadership_title': 'مجلس الإدارة',
             'gm_position': 'الرئيس التنفيذي',
-            'leader_position': 'مدير المشروع'
+            'leader_position': 'مدير المشروع',
+            'nav.news': 'الاخبار'
         }
     };
 
