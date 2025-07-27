@@ -83,3 +83,42 @@ body.light-mode .social-links .btn:hover {
     background: var(--primary-gold);
     color: var(--white);
 }
+
+/* Hiring page specific styles for light mode */
+body.light-mode .bg-light {
+    background-color: var(--light-gray) !important;
+}
+
+body.light-mode .card {
+    background: var(--white);
+    border-color: #e9ecef;
+}
+
+body.light-mode .form-control {
+    background: var(--white);
+    border-color: #ced4da;
+    color: var(--text-dark);
+}
+
+body.light-mode .form-control:focus {
+    background: var(--white);
+    color: var(--text-dark);
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 0 0.2rem rgba(184, 157, 79, 0.25);
+}
+
+body.light-mode .form-label {
+    color: var(--text-dark);
+}
+
+body.light-mode .text-muted {
+    color: var(--text-light) !important;
+}
+
+body.light-mode .hiring-feature {
+    background: var(--white);
+}
+
+body.light-mode .hiring-feature:hover {
+    background: rgba(184, 157, 79, 0.1);
+}

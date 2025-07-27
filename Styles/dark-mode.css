@@ -86,3 +86,50 @@ body.dark-mode .social-links .btn:hover {
     background: var(--primary-gold);
     color: var(--white);
 }
+
+/* Hiring page specific styles for dark mode */
+body.dark-mode .bg-light {
+    background-color: var(--dark-charcoal) !important;
+}
+
+body.dark-mode .card {
+    background: var(--light-gray);
+    border-color: #444;
+}
+
+body.dark-mode .form-control {
+    background: var(--dark-charcoal);
+    border-color: #555;
+    color: var(--text-dark);
+}
+
+body.dark-mode .form-control:focus {
+    background: var(--dark-charcoal);
+    color: var(--text-dark);
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
+}
+
+body.dark-mode .form-label {
+    color: var(--text-dark);
+}
+
+body.dark-mode .text-muted {
+    color: var(--text-light) !important;
+}
+
+body.dark-mode .hiring-feature {
+    background: var(--light-gray);
+}
+
+body.dark-mode .hiring-feature:hover {
+    background: rgba(255, 215, 0, 0.1);
+}
+
+body.dark-mode .section-title {
+    color: var(--text-dark) !important;
+}
+
+body.dark-mode .lead {
+    color: var(--text-light) !important;
+}

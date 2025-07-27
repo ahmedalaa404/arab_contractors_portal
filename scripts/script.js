@@ -65,6 +65,8 @@ $(document).ready(function() {
             'gm_position': 'Chief Executive Officer',
             'leader_position': 'Project Director',
             'nav.news': 'News'
+            ,'nav.hiring': 'hiring',
+            
         },
         ar: {
             'nav.home': 'الرئيسية',
@@ -75,7 +77,8 @@ $(document).ready(function() {
             'leadership_title': 'مجلس الإدارة',
             'gm_position': 'الرئيس التنفيذي',
             'leader_position': 'مدير المشروع',
-            'nav.news': 'الاخبار'
+            'nav.news': 'الاخبار',
+            'nav.hiring': 'التوظيف',
         }
     };
 
